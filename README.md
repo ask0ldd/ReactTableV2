@@ -6,7 +6,7 @@ On NPM : https://www.npmjs.com/package/@asklddco/react-table
 
 DOCUMENTATION
 
-##Table Of Content
+## Table Of Content
 
 [1 - Build Your Table Model](#step-1---build-your-table-model)
 
@@ -72,18 +72,18 @@ All those components are integrated by default to the Table component with no cu
 
 ## Presets and How to use Them
 
-**Base Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>**
+**Base Preset : `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>`**
 
 <img src="/public/basepreset.jpg">
 
-**LightPurple Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset}/>**
+**LightPurple Preset : `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset}/>`**
 
 <img src="/public/lightpurplepreset.jpg">
 
-**DarkGreen Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset}/>**
+**DarkGreen Preset : `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset}/>`**
 
 <img src="/public/darkgreenpreset.jpg">
 
-**DarkPurple Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset}/>**
+**DarkPurple Preset : `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset}/>`**
 
 <img src="/public/darkpurplepreset.jpg">
