@@ -11,7 +11,7 @@ DOCUMENTATION
 [1 - Build Your Table Model](#step-1---build-your-table-model)
 [2 - Using your Component](#step-2---using-your-component)
 [3 - Subcomponents](#subcomponents)
-[4 - Presets & How to use Them](#presets-&-how-to-use-them)
+[4 - Presets & How to use Them](#presets-and-how-to-use-them)
 
 ## Step 1 - Build your Table Model
 
@@ -67,7 +67,7 @@ All those components are integrated by default to the Table component with no cu
 
 <img src="/public/6-subcomponents.png">
 
-## Presets & How to use Them
+## Presets and How to use Them
 
 **Base Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>**
 
