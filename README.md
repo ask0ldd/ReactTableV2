@@ -13,7 +13,7 @@ DOCUMENTATION
 [3 - Subcomponents](##subcomponents)
 [4 - Presets & How to use Them](##presets-&-how-to-use-them)
 
-##Step 1 - Build your Table Model
+## Step 1 - Build your Table Model
 
 The Table Model is essential for defining the relationships between the displayed table and the data object.
 
@@ -55,19 +55,19 @@ And you would then end up with the following three sortable columns table :
 
 <img src="/public/5-tableexample.png"/>
 
-##Step 2 - Using your component
+## Step 2 - Using your component
 
 Now that your tableModel is defined, you can simply use our DatasTable component. Pass it your built model and your data object as follow :
 
 <img src="/public/4-component-2.png"/>
 
-##Subcomponents
+## Subcomponents
 
 All those components are integrated by default to the Table component with no customization possible at the moment.
 
 <img src="/public/6-subcomponents.png">
 
-##Presets & How to use Them
+## Presets & How to use Them
 
 **Base Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>**
 
