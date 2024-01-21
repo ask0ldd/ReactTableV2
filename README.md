@@ -9,8 +9,11 @@ DOCUMENTATION
 ##Table Of Content
 
 [1 - Build Your Table Model](#step-1---build-your-table-model)
+
 [2 - Using your Component](#step-2---using-your-component)
+
 [3 - Subcomponents](#subcomponents)
+
 [4 - Presets & How to use Them](#presets-and-how-to-use-them)
 
 ## Step 1 - Build your Table Model
