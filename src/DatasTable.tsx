@@ -11,6 +11,7 @@ import { TableModel } from './models/TableModel'
 import useTableManager from './hooks/useTableManager'
 import { DatasTableContext } from './DatasTableContext'
 import { IPreset } from './interfaces/IPreset'
+import { basePreset } from './presets/basePreset'
 
 /**
  * Component : Grouping of all the constitutive elements of a datatable.
@@ -25,7 +26,7 @@ import { IPreset } from './interfaces/IPreset'
  * @param {Object[]} props.tableDatas - Datas used to populate the table.
  * @return ( <DatasTable tableModel={tableModel} tableDatas={tableDatas}/> )
  */
-export function DatasTable({tableModel, tableDatas, preset} : IProps){
+function DatasTable({tableModel, tableDatas, preset} : IProps){
 
     // [perfs] tableModel & tableDatas props already triggering a re-render (being props), so no need of useState
     const isColumnsDefinitionMatchingDatas = useMemo(() => {
@@ -48,7 +49,7 @@ export function DatasTable({tableModel, tableDatas, preset} : IProps){
         <>
             { isColumnsDefinitionMatchingDatas ? 
                 // providing model, datas & dispatch fn to the children components
-                <DatasTableContext.Provider value={{tableModel, dispatch, tableState, preset : preset}}>
+                <DatasTableContext.Provider value={{tableModel, dispatch, tableState, preset : preset || basePreset}}>
                     <div id="entriesNSearchContainer">
                         <NDisplayedSelect/>                        
                         <SearchModule/>
@@ -71,5 +72,5 @@ export default DatasTable
 interface IProps {
     tableModel : TableModel
     tableDatas : Array<any>
-    preset : IPreset
+    preset? : IPreset
 }

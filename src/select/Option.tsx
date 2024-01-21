@@ -20,7 +20,7 @@ function Option({index, option} : IProps){
     const {preset} = useContext(DatasTableContext)
     const [hoverOption, setHoverOption] = useState("0")
 
-    const optionHoverStyle = { color : preset.selectEntriesPerPage.hoverOptionTextColor, background : preset.selectEntriesPerPage.hoverOptionBackgroundColor }
+    const optionHoverStyle = { color : preset.selectEntriesPerPage.hoverOptionTextColor, background : preset.selectEntriesPerPage.optionBackgroundColor.hover }
 
     /**
      * Check if the given option is active.
@@ -35,7 +35,7 @@ function Option({index, option} : IProps){
     return (
         <li role="option" id={option.value} data-value={option.value} aria-selected={isOptionActive(options[index])} 
         style={ hoverOption == option.value ? optionHoverStyle 
-             : isOptionActive(options[index]) ? {background:preset.selectEntriesPerPage.activeOptionBackgroundColor,} : {}
+             : isOptionActive(options[index]) ? {background:preset.selectEntriesPerPage.optionBackgroundColor.active,} : {}
         } 
         onMouseEnter={() => setHoverOption(option.value)}
         onMouseOut={() => setHoverOption("0")}

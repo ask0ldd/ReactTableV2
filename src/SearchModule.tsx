@@ -18,13 +18,13 @@ function SearchModule() {
     const inputStyle = {
         color : preset.searchBar.inputTextColor,
         background : preset.searchBar.inputBackgroundColor,
-        border : "1px solid " + preset.searchBar.inputBorderColor,
+        border : "1px solid " + preset.searchBar.inputBorderColor.default,
     }
 
     const inputStyleFocus = {
         ...inputStyle,
         /*outline: "none",*/
-        outline : "1px solid " + preset.searchBar.focusInputBorderColor,
+        outline : "1px solid " + preset.searchBar.inputBorderColor.focus,
     }
 
     return (

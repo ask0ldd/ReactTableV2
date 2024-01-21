@@ -23,17 +23,17 @@ function Pagination() {
 
     // const paginationPreset = preset && preset.paginationButton
     const paginationButtonStyle = {
-      background : preset.paginationButton.backgroundColor,
-      color : preset.paginationButton.textColor,
+      background : preset.paginationButton.backgroundColor.default,
+      color : preset.paginationButton.textColor.default,
       border : '1px solid ' + preset.paginationButton.borderColor,
     }
 
     const paginationButtonHoverStyle = {
-      background : preset.paginationButton.hoverBackgroundColor,
-      color : preset.paginationButton.hoverTextColor,
+      background : preset.paginationButton.backgroundColor.hover,
+      color : preset.paginationButton.textColor.hover,
       fontWeight : 600,
       boxShadow: '0 4px 8px ' + preset.paginationButton.hoverDropShadowColor,
-      border : '1px solid ' + preset.paginationButton.hoverBackgroundColor,
+      border : '1px solid ' + preset.paginationButton.backgroundColor.hover,
       opacity: 1,
     }
 

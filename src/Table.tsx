@@ -26,12 +26,12 @@ function Table() {
 
     // defining elements styles
     const thPreset = {color : preset.th.textColor, background : preset.th.backgroundColor, fontWeight:preset.th.fontWeight}
-    const oddRowPreset = {color : preset.oddRow.textColor, background : preset.oddRow.backgroundColor, borderBottom:'1px solid '+ preset.oddRow.bottomSeparatorColor}
-    const evenRowPreset = {color : preset.evenRow.textColor, background : preset.evenRow.backgroundColor, borderBottom:'1px solid '+ preset.evenRow.bottomSeparatorColor}
+    const oddRowPreset = {color : preset.oddRow.textColor.default, background : preset.oddRow.backgroundColor.default, borderBottom:'1px solid '+ preset.oddRow.bottomSeparatorColor}
+    const evenRowPreset = {color : preset.evenRow.textColor.default, background : preset.evenRow.backgroundColor.default, borderBottom:'1px solid '+ preset.evenRow.bottomSeparatorColor}
     const arrowInactiveColor = {color: preset.th.arrow.inactiveColor}
     const arrowActiveColor = {color: preset.th.arrow.activeColor}
     const topSeparatorColor = {borderBottom : '1px solid ' + preset.firstnLastRowSeparatorsColor}
-    const hoverRowStyle = {background : preset.evenRow.hoverBackgroundColor, borderBottom:'1px solid ' + preset.evenRow.hoverBackgroundColor, color : preset.evenRow.hoverTextColor}
+    const hoverRowStyle = {background : preset.evenRow.backgroundColor.hover, borderBottom:'1px solid ' + preset.evenRow.backgroundColor.hover, color : preset.evenRow.textColor.hover}
 
     return (
         <table id={tableModel.getTableId()} aria-label="Current Employees">

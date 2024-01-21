@@ -18,13 +18,13 @@ function SelectComboBox(){
 
     const comboboxStyle = {
         background: preset.selectEntriesPerPage.selectBackgroundColor , 
-        border: "1px solid "+ preset.selectEntriesPerPage.selectBorderColor,
+        border: "1px solid "+ preset.selectEntriesPerPage.selectBorderColor.default,
         color: preset.selectEntriesPerPage.selectTextColor
     }
     const comboboxFocusStyle = {
         background: preset.selectEntriesPerPage.selectBackgroundColor,
         border:  "1px solid "+ preset.selectEntriesPerPage.selectBackgroundColor, 
-        outline: "1px solid "+ preset.selectEntriesPerPage.focusSelectBorderColor, 
+        outline: "1px solid "+ preset.selectEntriesPerPage.selectBorderColor.focus, 
         color: preset.selectEntriesPerPage.selectTextColor
     }
 
