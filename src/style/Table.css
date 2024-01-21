@@ -1,0 +1,55 @@
+table {
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  min-width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+  height: 44px;
+}
+
+th {
+  text-align: left;
+  position: relative;
+}
+
+.arrowsContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  line-height: 1.1em;
+  color: #ddd;
+}
+
+th,
+td {
+  padding: 10px 36px 10px 18px;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+tbody tr:hover {
+  background: linear-gradient(360deg, #2c91e4dd, #2c91e4bb);
+  color: #fff;
+}
+
+.odd {
+  background-color: #f9f9f9;
+  /*background-color: #f5f9ff;*/
+}
+
+table thead,
+table tbody {
+  border-collapse: collapse;
+  border-bottom: 1px solid #111;
+}

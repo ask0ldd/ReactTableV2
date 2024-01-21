@@ -1,0 +1,29 @@
+{
+  "name": "@asklddco/react-table",
+  "version": "0.0.23",
+  "description": "A simple React Table. Design presets soon to be added.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc && xcopy .\\package.json .\\dist /y && xcopy .\\src\\style .\\dist\\style /y /e /i && xcopy .\\README.md .\\dist /y && npm publish .\\dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ask0ldd/ReactTable"
+  },
+  "keywords": [
+    "react",
+    "typescript"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ask0ldd/ReactTable/issues"
+  },
+  "homepage": "https://github.com/ask0ldd/ReactTable#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.14",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.3.5"
+  }
+}

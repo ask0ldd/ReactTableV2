@@ -1,0 +1,21 @@
+#searchContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+#searchContainer label {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+/*#searchContainer input:focus {
+  outline: 1px solid #0078d7;
+}*/
+
+#searchContainer input {
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  transform: translateY(-4px);
+}
