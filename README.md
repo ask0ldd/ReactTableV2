@@ -62,6 +62,18 @@ All those components are integrated by default to the Table component with no cu
 
 ## Presets
 
-**BasePreset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>**
+**Base Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>**
 
 <img src="/public/basepreset.jpg">
+
+**LightPurple Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset}/>**
+
+<img src="/public/lightpurplepreset.jpg">
+
+**DarkGreen Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset}/>**
+
+<img src="/public/darkgreenpreset.jpg">
+
+**DarkPurple Preset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset}/>**
+
+<img src="/public/darkpurplepreset.jpg">
