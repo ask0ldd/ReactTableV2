@@ -1,6 +1,6 @@
 {
   "name": "@asklddco/react-table",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "A simple React Table. Design presets soon to be added.",
   "main": "index.js",
   "scripts": {

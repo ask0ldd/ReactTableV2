@@ -59,3 +59,9 @@ Now that your tableModel is defined, you can simply use our DatasTable component
 All those components are integrated by default to the Table component with no customization possible at the moment.
 
 <img src="/public/6-subcomponents.png">
+
+## Presets
+
+**BasePreset : <DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>**
+
+<img src="/public/basepreset.jpg">

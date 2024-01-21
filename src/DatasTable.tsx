@@ -26,7 +26,7 @@ import { basePreset } from './presets/basePreset'
  * @param {Object[]} props.tableDatas - Datas used to populate the table.
  * @return ( <DatasTable tableModel={tableModel} tableDatas={tableDatas}/> )
  */
-function DatasTable({tableModel, tableDatas, preset} : IProps){
+export function DatasTable({tableModel, tableDatas, preset} : IProps){
 
     // [perfs] tableModel & tableDatas props already triggering a re-render (being props), so no need of useState
     const isColumnsDefinitionMatchingDatas = useMemo(() => {
