@@ -1,6 +1,6 @@
 React Table Component Package (WIP)
 
-Forthcoming update : More Presets. More customisation options. Improved Doc.
+Forthcoming update : More Presets & An easy Way to create your own Presets.
 
 On NPM : https://www.npmjs.com/package/@asklddco/react-table
 
@@ -10,7 +10,7 @@ DOCUMENTATION
 
 [1 - Build Your Table Model](#step-1---build-your-table-model)
 
-[2 - Using your Component](#step-2---using-your-component)
+[2 - Using the Table Component](#step-2---using-the-table-component)
 
 [3 - Subcomponents](#subcomponents)
 
@@ -58,7 +58,7 @@ And you would then end up with the following three sortable columns table :
 
 <img src="/public/5-tableexample.png"/>
 
-## Step 2 - Using your component
+## Step 2 - Using the Table Component
 
 Now that your tableModel is defined, you can simply use our DatasTable component. Pass it your built model and your data object as follow :
 
@@ -72,18 +72,22 @@ All those components are integrated by default to the Table component with no cu
 
 ## Presets and How to use Them
 
-**Base Preset : `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>`**
+**Base Preset :**
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset as IPreset}/>`
 
 <img src="/public/basepreset.jpg">
 
-**LightPurple Preset : `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset}/>`**
+**LightPurple Preset :**
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset as IPreset}/>`
 
 <img src="/public/lightpurplepreset.jpg">
 
-**DarkGreen Preset : `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset}/>`**
+**DarkGreen Preset :**
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset as IPreset}/>`
 
 <img src="/public/darkgreenpreset.jpg">
 
-**DarkPurple Preset : `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset}/>`**
+**DarkPurple Preset :**
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset as IPreset}/>`
 
 <img src="/public/darkpurplepreset.jpg">

@@ -1,6 +1,11 @@
 import { IPreset } from "../interfaces/IPreset";
 
 export const basePreset : IPreset = {
+    /*
+    table : {
+        backgroundColor : "#FFFFFF",
+    }
+    */
     global: {
         font: "Jost",
         textColor: "#213547",
