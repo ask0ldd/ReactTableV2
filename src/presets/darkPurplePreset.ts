@@ -55,4 +55,7 @@ export const darkPurplePreset : IPreset = {
         selectBorderColor: {default : "rgb(47, 45, 59)", focus : "#693faf"},
         optionBackgroundColor : {active : "rgba(125, 118, 155, 0.2)", hover : "#693faf"}
     },
+    setGlobalFont : function (font : string) {
+        return {...this, global : {...this.global, font : font}} as IPreset
+    },
 }

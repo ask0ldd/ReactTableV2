@@ -59,4 +59,5 @@ export interface IPreset {
         hoverOptionTextColor : string,
         arrowColor : string,
     },
+    setGlobalFont : (font : string) => IPreset
 }

@@ -50,12 +50,12 @@ export function DatasTable({tableModel, tableDatas, preset} : IProps){
             { isColumnsDefinitionMatchingDatas ? 
                 // providing model, datas & dispatch fn to the children components
                 <DatasTableContext.Provider value={{tableModel, dispatch, tableState, preset : preset || basePreset}}>
-                    <div id="entriesNSearchContainer">
+                    <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor} : {}} id="entriesNSearchContainer">
                         <NDisplayedSelect/>                        
                         <SearchModule/>
                     </div>
                     <Table/>
-                    <div id="infosNPaginationContainer">
+                    <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor} : {}} id="infosNPaginationContainer">
                         <NEntries/>
                         <Pagination/>
                     </div>

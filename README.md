@@ -12,9 +12,9 @@ DOCUMENTATION
 
 [2 - Using the Table Component](#step-2---using-the-table-component)
 
-[3 - Subcomponents](#subcomponents)
+[3 - Subcomponents (FYI)](#subcomponents)
 
-[4 - Presets & How to use Them](#presets-and-how-to-use-them)
+[4 - Presets & How to Add the Font of your Choice ](#presets-and-add-the-font-of-your-choice)
 
 ## Step 1 - Build your Table Model
 
@@ -22,7 +22,7 @@ The Table Model is essential for defining the relationships between the displaye
 
 Let's now build this model into the react page component that will host your react table.
 
-**A - Instanciate the TableModel and give it a name :**
+#### A - Instanciate the TableModel and give it a name :
 
 <img src="/public/1-createmodel-2.png"/>
 
@@ -33,7 +33,7 @@ This model will be key in order to define the following properties :
 - Which name should be given to your columns (your '< th >' tag content).
 - Are some of your columns sortable ?
 
-**B - Using the ColumnBuilder, you should now add some columns to your model :**
+#### B - Using the ColumnBuilder, you should now add some columns to your model :
 
 <img src="/public/2-addcolumns-4.png"/>
 
@@ -70,24 +70,38 @@ All those components are integrated by default to the Table component with no cu
 
 <img src="/public/6-subcomponents.png">
 
-## Presets and How to use Them
+## Presets and Add the Font of your Choice
 
-**Base Preset :**
+#### Presets
+
+To use a Preset, You only need to pass it as a Prop. Here are the existing presets atm :
+
+###### Base Preset :
+
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset as IPreset}/>`
 
 <img src="/public/basepreset.jpg">
 
-**LightPurple Preset :**
+###### LightPurple Preset :
+
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset as IPreset}/>`
 
 <img src="/public/lightpurplepreset.jpg">
 
-**DarkGreen Preset :**
+###### DarkGreen Preset :
+
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset as IPreset}/>`
 
 <img src="/public/darkgreenpreset.jpg">
 
-**DarkPurple Preset :**
+###### DarkPurple Preset :
+
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset as IPreset}/>`
 
 <img src="/public/darkpurplepreset.jpg">
+
+#### Add the Font of Your Choice
+
+To modify the font of a preset to your liking, use the setGlobalFont method from a Preset and pass it the value of a css font-family property.
+
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial") as IPreset)}/>`

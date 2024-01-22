@@ -7,7 +7,7 @@ export const basePreset : IPreset = {
     }
     */
     global: {
-        font: "Jost",
+        font: "'Jost', sans-serif",
         textColor: "#213547",
     },
     th: {
@@ -58,5 +58,8 @@ export const basePreset : IPreset = {
         arrowColor: "#213547",
         selectBorderColor: {default : "#c5c5c5", focus : "#0078d7"},
         optionBackgroundColor : {active : "#dfdfdf", hover : "#0078d7"}
+    },
+    setGlobalFont : function (font : string) {
+        return {...this, global : {...this.global, font : font}} as IPreset
     },
 }
