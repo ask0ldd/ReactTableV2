@@ -16,6 +16,8 @@ DOCUMENTATION
 
 [4 - Presets & How to Add the Font of your Choice ](#presets-and-add-the-font-of-your-choice)
 
+[5 - Typical React Example ](#typical-react-example)
+
 ## Step 1 - Build your Table Model
 
 The Table Model is essential for defining the relationships between the displayed table and the data object.
@@ -102,6 +104,10 @@ To use a Preset, You only need to pass it as a Prop. Here are the existing prese
 
 #### Add the Font of Your Choice
 
-To modify the font of a preset to your liking, use the setGlobalFont method from a Preset and pass it the value of a css font-family property.
+To modify the default font from a preset to your liking, use the setGlobalFont method from a Preset and pass it the value of a css font-family property.
 
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial") as IPreset)}/>`
+
+## Typical React example
+
+<img src="/public/fullinit.jpg">
