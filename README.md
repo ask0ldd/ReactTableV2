@@ -24,7 +24,7 @@ The Table Model is essential for defining the relationships between the displaye
 
 Let's now build this model into the react page component that will host your react table.
 
-#### A - Instanciate the TableModel and give it a name :
+### A - Instanciate the TableModel and give it a name :
 
 <img src="/public/1-createmodel-2.png"/>
 
@@ -35,7 +35,7 @@ This model will be key in order to define the following properties :
 - Which name should be given to your columns (your '< th >' tag content).
 - Are some of your columns sortable ?
 
-#### B - Using the ColumnBuilder, you should now add some columns to your model :
+### B - Using the ColumnBuilder, you should now add some columns to your model :
 
 <img src="/public/2-addcolumns-4.png"/>
 
@@ -74,35 +74,35 @@ All those components are integrated by default to the Table component with no cu
 
 ## Presets and Add the Font of your Choice
 
-#### Presets
+### Presets
 
 To use a Preset, You only need to pass it as a Prop. Here are the existing presets atm :
 
-###### Base Preset :
+##### Base Preset :
 
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>`
 
 <img src="/public/basepreset.jpg">
 
-###### LightPurple Preset :
+##### LightPurple Preset :
 
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset}/>`
 
 <img src="/public/lightpurplepreset.jpg">
 
-###### DarkGreen Preset :
+##### DarkGreen Preset :
 
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset}/>`
 
 <img src="/public/darkgreenpreset.jpg">
 
-###### DarkPurple Preset :
+##### DarkPurple Preset :
 
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset}/>`
 
 <img src="/public/darkpurplepreset.jpg">
 
-#### Add the Font of Your Choice
+### Add the Font of Your Choice
 
 To modify the default font from a preset to your liking, use the setGlobalFont method from a Preset and pass it the value of a css font-family property.
 
@@ -110,4 +110,4 @@ To modify the default font from a preset to your liking, use the setGlobalFont m
 
 ## Typical React example
 
-<img src="/public/fullinit2.png">
+<img src="/public/fullinit3.png">
