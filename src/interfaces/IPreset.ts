@@ -6,6 +6,7 @@ export interface IPreset {
     global :{
         font : string,
         textColor : string,
+        backgroundColor : string,
     },
     th : {
         textColor : string,

@@ -1,6 +1,6 @@
 React Table Component Package (WIP)
 
-Forthcoming update : More Presets & An easy Way to create your own Presets.
+Forthcoming update : More Presets & An easy Way to build your own Presets.
 
 On NPM : https://www.npmjs.com/package/@asklddco/react-table
 
@@ -14,9 +14,9 @@ DOCUMENTATION
 
 [3 - Subcomponents (FYI only)](#subcomponents-[fyi-only])
 
-[4 - Presets & How to Add the Font of your Choice ](#presets-and-add-the-font-of-your-choice)
+[4 - Presets & Adding the Font of your Choice ](#presets-and-adding-the-font-of-your-choice)
 
-[5 - Typical React Example ](#typical-react-example)
+[5 - Simple React Example ](#simple-react-example)
 
 ## Step 1 - Build your Table Model
 
@@ -56,27 +56,27 @@ As an example, building this model would qualify for such a data object :
 
 <img src="/public/3-userdatas-3.png"/>
 
-And you would then end up with the following three sortable columns table :
+You would then end up with the following three sortable columns table :
 
 <img src="/public/5-tableexample.png"/>
 
 ## Step 2 - Using the Table Component
 
-Now that your tableModel is defined, you can simply use our DatasTable component. Pass it your built model and your data object as follow :
+Now that your tableModel is defined, it can be passed as a Prop with your Datas Object to our DatasTable Component :
 
 <img src="/public/4-component-2.png"/>
 
 ## Subcomponents [FYI only]
 
-All those components are integrated by default to the Table component with no customization possible at the moment.
+All those subcomponents are integrated by default. No customization is possible at the moment.
 
 <img src="/public/6-subcomponents.png">
 
-## Presets and Add the Font of your Choice
+## Presets and Adding the Font of your Choice
 
 ### Presets
 
-To use a Preset, You only need to pass it as a Prop. Here are the existing presets atm :
+To use a Preset, simply pass it as a Prop. Here is a list of the 4 available presets (more to come) :
 
 ##### Base Preset :
 
@@ -104,10 +104,10 @@ To use a Preset, You only need to pass it as a Prop. Here are the existing prese
 
 ### Add the Font of Your Choice
 
-To modify the default font from a preset to your liking, use the setGlobalFont method from a Preset and pass it the value of a css font-family property.
+To replace a preset's default font, use the setGlobalFont method and pass the desired font family value as a parameter, similar to the CSS font-family property.
 
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial")}/>`
 
-## Typical React example
+## Simple React example
 
 <img src="/public/fullinit3.png">

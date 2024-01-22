@@ -4,6 +4,7 @@ export const lightPurplePreset : IPreset = {
     global: {
         font: "Jost",
         textColor: "#213547",
+        backgroundColor : "#FFFFFF",
     },
     th: {
         textColor: "#213547",

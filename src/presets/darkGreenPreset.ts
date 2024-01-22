@@ -5,6 +5,7 @@ export const darkGreenPreset : IPreset = {
     global: {
         font: "Jost",
         textColor: "#7D769BDD",
+        backgroundColor : "#0A0A12",
     },
     th: {
         textColor: "#918AAD",

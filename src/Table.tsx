@@ -34,7 +34,7 @@ function Table() {
     const hoverRowStyle = {background : preset.evenRow.backgroundColor.hover, borderBottom:'1px solid ' + preset.evenRow.backgroundColor.hover, color : preset.evenRow.textColor.hover}
 
     return (
-      <table style={preset.global ? {fontFamily : preset.global.font, color : preset.global.textColor} : {}} id={tableModel.getTableId()} aria-label="Current Employees">
+      <table style={preset.global ? {background: preset.global.backgroundColor, fontFamily : preset.global.font, color : preset.global.textColor} : {}} id={tableModel.getTableId()} aria-label="Current Employees">
         <thead style={topSeparatorColor}>
           <tr style={{background : thPreset.background, border:'none'}}>
           {[...tableModel.getColumnsNamesList()].map((name, index) => (
