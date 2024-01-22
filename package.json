@@ -1,7 +1,7 @@
 {
   "name": "@asklddco/react-table",
-  "version": "1.0.5",
-  "description": "A simple React Table. 4 design presets. More to be added soon.",
+  "version": "1.0.9",
+  "description": "A simple React Table. 4 design presets & customisable Font. More to be added soon.",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",

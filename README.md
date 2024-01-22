@@ -12,7 +12,7 @@ DOCUMENTATION
 
 [2 - Using the Table Component](#step-2---using-the-table-component)
 
-[3 - Subcomponents (FYI)](#subcomponents)
+[3 - Subcomponents (FYI only)](#subcomponents-[fyi-only])
 
 [4 - Presets & How to Add the Font of your Choice ](#presets-and-add-the-font-of-your-choice)
 
@@ -66,7 +66,7 @@ Now that your tableModel is defined, you can simply use our DatasTable component
 
 <img src="/public/4-component-2.png"/>
 
-## Subcomponents
+## Subcomponents [FYI only]
 
 All those components are integrated by default to the Table component with no customization possible at the moment.
 
@@ -80,25 +80,25 @@ To use a Preset, You only need to pass it as a Prop. Here are the existing prese
 
 ###### Base Preset :
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset as IPreset}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>`
 
 <img src="/public/basepreset.jpg">
 
 ###### LightPurple Preset :
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset as IPreset}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset}/>`
 
 <img src="/public/lightpurplepreset.jpg">
 
 ###### DarkGreen Preset :
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset as IPreset}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset}/>`
 
 <img src="/public/darkgreenpreset.jpg">
 
 ###### DarkPurple Preset :
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset as IPreset}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset}/>`
 
 <img src="/public/darkpurplepreset.jpg">
 
@@ -106,8 +106,8 @@ To use a Preset, You only need to pass it as a Prop. Here are the existing prese
 
 To modify the default font from a preset to your liking, use the setGlobalFont method from a Preset and pass it the value of a css font-family property.
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial") as IPreset)}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial")}/>`
 
 ## Typical React example
 
-<img src="/public/fullinit.jpg">
+<img src="/public/fullinit2.png">
