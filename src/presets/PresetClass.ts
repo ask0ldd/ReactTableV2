@@ -18,7 +18,7 @@ class PresetClass {
     /**
      * @returns {IPreset} The preset object
      */
-    get(){
+    get() : IPreset {
         return this.#preset
     }
 
