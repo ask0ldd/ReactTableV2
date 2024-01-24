@@ -146,7 +146,7 @@ You can take any existing preset and modify some of its values through those met
         </tr>
         <tr>
             <td>setTHStyle</td>
-            <td>The Table Header Dtyle</td>
+            <td>The Table Header Style</td>
             <td>
                 .setTHStyle({ textColor: "#000000", background: "#FFFFFF", arrowColor: "#CCCCCC", activeArrowColor: "#0000FF" })
             </td>
