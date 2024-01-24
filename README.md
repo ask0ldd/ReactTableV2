@@ -136,7 +136,7 @@ You can take any existing preset and modify some of its values through those met
         </tr>
         <tr>
             <td>setBordersColors</td>
-            <td>The Border Colors of the Searchbar / Dropdown depending on their states</td>
+            <td>The Border Colors of the Searchbar<br>& Dropdown depending on their states</td>
             <td>.setBorderColors({<br>
                 &nbsp;&nbsp;&nbsp;_default: "#CCCCCC",<br>
                 &nbsp;&nbsp;&nbsp;focus: "#0000FF" <br>
