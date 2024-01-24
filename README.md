@@ -115,26 +115,31 @@ You can take any existing preset and modify some of its values through those met
 <table>
     <thead>
         <tr>
-            <th>methods</th>
-            <th>parameters</th>
+            <th>Methods</th>
+            <th>Targets</th>
+            <th>Usage Example</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <th>setGlobalFont</th>
-            <th>@param {string} font - The global font : A CSS font-family value</th>
+            <th>The Font for the Table & all its subcomponents</th>
+            <th style="font-weight:400;">.setGlobalFont("Arial")</th>
         </tr>
         <tr>
             <th>setBordersColors</th>
-            <th>@param {{ _default: string; focus: string; }} - The border colors of the searchbar / dropdown depending on its state</th>
+            <th>The Border Colors of the Searchbar / Dropdown depending on its state</th>
+            <th style="font-weight:400;">.setBorderColors({ _default: "#CCCCCC", focus: "#0000FF" })</th>
         </tr>
         <tr>
             <th>setSeparatorColor</th>
-            <th>@param {string} color - The first & last separators color</th>
+            <th>The Color of the last & first Separators</th>
+            <th style="font-weight:400;">.setSeparatorColor("#000000")</th>
         </tr>
         <tr>
             <th>setTHStyle</th>
-            <th>@param {{ textColor: string; background: string; arrowColor: string; activeArrowColor: string; }} - The table header style</th>
+            <th>The Table Header Dtyle</th>
+            <th style="font-weight:400;">.setTHStyle({ textColor: "#000000", background: "#FFFFFF", arrowColor: "#CCCCCC", activeArrowColor: "#0000FF" })</th>
         </tr>
         <tr>
             <th>setHoveredElementsStyle</th>
