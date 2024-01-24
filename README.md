@@ -31,7 +31,7 @@ Let's now build this model into the react page component that will host your rea
 This model will be key in order to define the following properties :
 
 - Which specific datas should be extracted from your data object.
-- Of which types those datas are. Mandatory since it will auto-define a sorting algorithm (sortability being activated or not).
+- Of which types those datas are. Mandatory since it will auto-define a sorting algorithm.
 - Which name should be given to your columns (your '< th >' tag content).
 - Are some of your columns sortable ?
 
@@ -62,7 +62,7 @@ You would then end up with the following three sortable columns table :
 
 ## Step 2 - Using the Table Component
 
-Now that your tableModel is defined, it can be passed as a Prop with your Datas Object to our DatasTable Component :
+Now that your tableModel is defined, it can be passed as a Prop with your Datas Object to our Component :
 
 <img src="/public/4-component-2.png"/>
 
@@ -107,6 +107,49 @@ To use a Preset, simply pass it as a Prop. Here is a list of the 4 available pre
 To replace a preset's default font, use the setGlobalFont method and pass the desired font family value as a parameter, similar to the CSS font-family property.
 
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial")}/>`
+
+## Presets Deeper Customization
+
+You can take any existing preset and modify some of its values through those methods :
+
+<table>
+    <thead>
+        <tr>
+            <th>methods</th>
+            <th>parameters</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>setGlobalFont</th>
+            <th>@param {string} font - The global font : A CSS font-family value</th>
+        </tr>
+        <tr>
+            <th>setBordersColors</th>
+            <th>@param {{ _default: string; focus: string; }} - The border colors of the searchbar / dropdown depending on its state</th>
+        </tr>
+        <tr>
+            <th>setSeparatorColor</th>
+            <th>@param {string} color - The first & last separators color</th>
+        </tr>
+        <tr>
+            <th>setTHStyle</th>
+            <th>@param {{ textColor: string; background: string; arrowColor: string; activeArrowColor: string; }} - The table header style</th>
+        </tr>
+        <tr>
+            <th>setHoveredElementsStyle</th>
+            <th>@param {{ textColor: string; background: string; }} - Set the style for all elements the hoverable elements</th>
+        </tr>
+        <tr>
+            <th>setOddRowsStyle</th>
+            <th>@param {{ background: string; separatorColor: string; }} - Some new odd rows style</th>
+        </tr>
+        <tr>
+            <th>setEvenRowsStyle</th>
+            <th>@param {{ background: string; separatorColor: string; }} - Some new even rows style</th>
+        </tr>
+    </tbody>
+</table>
 
 ## Simple React example
 

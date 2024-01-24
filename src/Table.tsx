@@ -53,7 +53,7 @@ function Table() {
             <tr onMouseOut={() => setHoverTR(-1)} onMouseEnter={() => setHoverTR(index)}
                 style={ hoverTR === index ? hoverRowStyle
                 : {...isRowOdd(index) ? oddRowPreset : evenRowPreset, 
-                borderBottom : isLastRow(index, rowsToDisplay.length-1) ? 'none' : oddRowPreset.borderBottom}} 
+                borderBottom : isLastRow(index, rowsToDisplay.length-1) ? 'none' : (isRowOdd(index) ? oddRowPreset.borderBottom : evenRowPreset.borderBottom)}} 
                 key={'trtable-'+index} className={isRowOdd(index) + isLastRow(index, rowsToDisplay.length-1)}>
               {[...tableAccessors].map((key : string) => (
                 <td key={'tdtable-'+key+'-'+index}>{datarow[key as keyof typeof datarow]}</td>

@@ -1,6 +1,7 @@
-import { IPreset } from "../interfaces/IPreset";
+import PresetClass from "./PresetClass";
 
-export const lightPurplePreset : IPreset = {
+/* eslint-disable @typescript-eslint/no-unused-vars */
+export const lightPurplePreset = new PresetClass({
     global: {
         font: "Jost",
         textColor: "#213547",
@@ -55,7 +56,4 @@ export const lightPurplePreset : IPreset = {
         selectBorderColor: {default : "#c5c5c5", focus : "#5e30b4bb"},
         optionBackgroundColor : {active : "#dfdfdf", hover : "#5e30b4bb"}
     },
-    setGlobalFont : function (font : string) : IPreset {
-        return {...this, global : {...this.global, font : font}} as IPreset
-    },
-}
+})

@@ -60,5 +60,12 @@ export interface IPreset {
         hoverOptionTextColor : string,
         arrowColor : string,
     },
-    setGlobalFont : (font : string) => IPreset
+    /*setGlobalFont : (font : string) => IPreset,
+    setBordersColors : ({_default, focus} : {_default : string, focus : string}) => IPreset,
+    setSeparatorColor : (color : string ) => IPreset,
+    setTHStyle : ({textColor, background, arrowColor, activeArrowColor} : {textColor : string, background : string, arrowColor : string, activeArrowColor : string}) => IPreset
+    setHoveredElementsStyle : ({textColor, background} : {textColor : string, background : string}) => IPreset,
+    setOddRowsStyle : ({background, separatorColor} : {background : string, separatorColor : string}) => IPreset,
+    setEvenRowsStyle : ({background, separatorColor} : {background : string, separatorColor : string}) => IPreset,*/
+    // button style
 }
