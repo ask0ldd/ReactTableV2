@@ -28,6 +28,7 @@ Let's now build this model into the react page component that will host your rea
 
 ### A - Instanciate the TableModel and give it a name :
 
+<br>
 <img src="/public/1-createmodel-2.png"/>
 
 This model will be key in order to define the following properties :
@@ -39,15 +40,26 @@ This model will be key in order to define the following properties :
 
 ### B - Using the ColumnBuilder, you should now add some columns to your model :
 
+<br>
 <img src="/public/2-addcolumns-4.png"/>
 
 As expected, with :
 
-- <b>setColumnName()</b> : We give a name to our column.
-- <b>setDatatypeAsString()</b> : We define the data type that should populate my column. Here it should be populated with strings.
-- <b>setAccessor()</b> : We specifie the key in the data object associated with the value needed to fill the column.
-- <b>SetSortability()</b> : We indicate to our model if our column should be sortable or not.
-
+<table>
+<thead>
+    <tr>
+        <th>Builders Methods</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+    <tr><td><b>setColumnName()</b></td><td>We give a name to our column</td></tr>
+    <tr><td><b>setDatatypeAsString()</b></td><td>We define the data type that should populate my column. Here it should be populated with strings</td></tr>
+    <tr><td><b>setAccessor()</b></td><td>We specifie the key in the data object associated with the value needed to fill the column</td></tr>
+    <tr><td><b>SetSortability()</b></td><td>We indicate to our model if our column should be sortable or not</td></tr>
+</tbody>
+</table>
+<BR>
 Here are the different methods to define your datatypes :
 
 - setDatatypeAsString()
@@ -114,10 +126,12 @@ To replace a preset's default font, use the setGlobalFont method and pass the de
 
 ### Example using the setGlobalFont & the setHoveredElementsStyle methods :
 
+<br>
 <img src="/public/customizedpreset.png">
 
 ### All Available Customization Methods
 
+<br>
 You can take any existing preset and modify some of its values through those methods :
 
 <table>
@@ -130,26 +144,26 @@ You can take any existing preset and modify some of its values through those met
     </thead>
     <tbody>
         <tr>
-            <td>setGlobalFont</td>
+            <td><b>setGlobalFont</b></td>
             <td>The Font for the Table & all its subcomponents</td>
             <td>.setGlobalFont("Arial")</td>
         </tr>
         <tr>
-            <td>setBordersColors</td>
-            <td>The Border Colors of the Searchbar<br>& Dropdown depending on their states</td>
+            <td><b>setBordersColors</b></td>
+            <td>The Border Colors of the Searchbar<br>& the Dropdown depending on their states</td>
             <td>.setBorderColors({<br>
                 &nbsp;&nbsp;&nbsp;_default: "#CCCCCC",<br>
                 &nbsp;&nbsp;&nbsp;focus: "#0000FF" <br>
             })</td>
         </tr>
         <tr>
-            <td>setSeparatorColor</td>
+            <td><b>setSeparatorColor</b></td>
             <td>The Color of the last & first Separators</td>
             <td>.setSeparatorColor("#000000")</td>
         </tr>
         <tr>
-            <td>setTHStyle</td>
-            <td>The Table Header Style</td>
+            <td><b>setTHStyle</b></td>
+            <td>The Style of the Table Header</td>
             <td>
                 .setTHStyle({<br>
                     &nbsp;&nbsp;&nbsp;textColor: "#000000",<br>
@@ -160,24 +174,24 @@ You can take any existing preset and modify some of its values through those met
             </td>
         </tr>
         <tr>
-            <td>setHoveredElementsStyle</td>
-            <td>The Style for the hoverable elements</td>
+            <td><b>setHoveredElementsStyle</b></td>
+            <td>The Style of the Hoverable Elements</td>
             <td>.setHoveredElementsStyle({<br>
                 &nbsp;&nbsp;&nbsp;textColor: "#FFFFFF",<br>
                 &nbsp;&nbsp;&nbsp;background: "#0000FF"<br>
             })</td>
         </tr>
         <tr>
-            <td>setOddRowsStyle</td>
-            <td>The Odd Rows Style</td>
+            <td><b>setOddRowsStyle</b></td>
+            <td>The Style of the Odd Rows</td>
             <td>.setOddRowsStyle({<br>
                 &nbsp;&nbsp;&nbsp;background: "#DDDDDD",<br>
                 &nbsp;&nbsp;&nbsp;separatorColor: "#BBBBBB"<br>
             })</td>
         </tr>
         <tr>
-            <td>setEvenRowsStyle</td>
-            <td>The Even Rows Style</td>
+            <td><b>setEvenRowsStyle</b></td>
+            <td>The Style of the Even Rows</td>
             <td>.setEvenRowsStyle({ <br>
                 &nbsp;&nbsp;&nbsp;background: "#FFFFFF",<br>
                 &nbsp;&nbsp;&nbsp;separatorColor: "#BBBBBB"<br>
@@ -185,7 +199,7 @@ You can take any existing preset and modify some of its values through those met
         </tr>
     </tbody>
 </table>
-
+<br>
 ## Simple React example
 
-<img src="/public/fullinit3.png">
+<img src="/public/fullinit4.png">
