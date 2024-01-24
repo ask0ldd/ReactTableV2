@@ -114,7 +114,7 @@ To replace a preset's default font, use the setGlobalFont method and pass the de
 
 ### Example using the setGlobalFont & the setHoveredElementsStyle methods :
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial").setHoveredElementsStyle({ textColor: "#FFFFFF", background: "#FF0000" }).get()}/>`
+<img src="/public/customizedpreset.png">
 
 ### All Available Customization Methods
 
