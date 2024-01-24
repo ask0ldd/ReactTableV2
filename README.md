@@ -12,11 +12,13 @@ DOCUMENTATION
 
 [2 - Using the Table Component](#step-2---using-the-table-component)
 
-[3 - Subcomponents (FYI only)](#subcomponents-[fyi-only])
+[3 - Subcomponents (FYI only)](#subcomponents-/fyi-only/)
 
 [4 - Presets & Adding the Font of your Choice ](#presets-and-adding-the-font-of-your-choice)
 
-[5 - Simple React Example ](#simple-react-example)
+[5 - Presets Deeper Customization](#presets-deeper-customization)
+
+[6 - Simple React Example ](#simple-react-example)
 
 ## Step 1 - Build your Table Model
 
@@ -66,7 +68,7 @@ Now that your tableModel is defined, it can be passed as a Prop with your Datas 
 
 <img src="/public/4-component-2.png"/>
 
-## Subcomponents [FYI only]
+## Subcomponents /FYI only/
 
 All those subcomponents are integrated by default. No customization is possible at the moment.
 
@@ -80,25 +82,25 @@ To use a Preset, simply pass it as a Prop. Here is a list of the 4 available pre
 
 ##### Base Preset :
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset.get()}/>`
 
 <img src="/public/basepreset.jpg">
 
 ##### LightPurple Preset :
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset.get()}/>`
 
 <img src="/public/lightpurplepreset.jpg">
 
 ##### DarkGreen Preset :
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset.get()}/>`
 
 <img src="/public/darkgreenpreset.jpg">
 
 ##### DarkPurple Preset :
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.get()}/>`
 
 <img src="/public/darkpurplepreset.jpg">
 
@@ -106,9 +108,15 @@ To use a Preset, simply pass it as a Prop. Here is a list of the 4 available pre
 
 To replace a preset's default font, use the setGlobalFont method and pass the desired font family value as a parameter, similar to the CSS font-family property.
 
-`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial")}/>`
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial").get()}/>`
 
 ## Presets Deeper Customization
+
+### Example using the setGlobalFont & the setHoveredElementsStyle methods :
+
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial").setHoveredElementsStyle({ textColor: "#FFFFFF", background: "#FF0000" }).get()}/>`
+
+### All Available Customization Methods
 
 You can take any existing preset and modify some of its values through those methods :
 
@@ -122,36 +130,41 @@ You can take any existing preset and modify some of its values through those met
     </thead>
     <tbody>
         <tr>
-            <th>setGlobalFont</th>
-            <th>The Font for the Table & all its subcomponents</th>
-            <th style="font-weight:400;">.setGlobalFont("Arial")</th>
+            <td>setGlobalFont</td>
+            <td>The Font for the Table & all its subcomponents</td>
+            <td>.setGlobalFont("Arial")</td>
         </tr>
         <tr>
-            <th>setBordersColors</th>
-            <th>The Border Colors of the Searchbar / Dropdown depending on its state</th>
-            <th style="font-weight:400;">.setBorderColors({ _default: "#CCCCCC", focus: "#0000FF" })</th>
+            <td>setBordersColors</td>
+            <td>The Border Colors of the Searchbar / Dropdown depending on its state</td>
+            <td>.setBorderColors({ _default: "#CCCCCC", focus: "#0000FF" })</td>
         </tr>
         <tr>
-            <th>setSeparatorColor</th>
-            <th>The Color of the last & first Separators</th>
-            <th style="font-weight:400;">.setSeparatorColor("#000000")</th>
+            <td>setSeparatorColor</td>
+            <td>The Color of the last & first Separators</td>
+            <td>.setSeparatorColor("#000000")</td>
         </tr>
         <tr>
-            <th>setTHStyle</th>
-            <th>The Table Header Dtyle</th>
-            <th style="font-weight:400;">.setTHStyle({ textColor: "#000000", background: "#FFFFFF", arrowColor: "#CCCCCC", activeArrowColor: "#0000FF" })</th>
+            <td>setTHStyle</td>
+            <td>The Table Header Dtyle</td>
+            <td>
+                .setTHStyle({ textColor: "#000000", background: "#FFFFFF", arrowColor: "#CCCCCC", activeArrowColor: "#0000FF" })
+            </td>
         </tr>
         <tr>
-            <th>setHoveredElementsStyle</th>
-            <th>@param {{ textColor: string; background: string; }} - Set the style for all elements the hoverable elements</th>
+            <td>setHoveredElementsStyle</td>
+            <td>The Style for the hoverable elements</td>
+            <td>.setHoveredElementsStyle({ textColor: "#FFFFFF", background: "#0000FF" })</td>
         </tr>
         <tr>
-            <th>setOddRowsStyle</th>
-            <th>@param {{ background: string; separatorColor: string; }} - Some new odd rows style</th>
+            <td>setOddRowsStyle</td>
+            <td>The Odd Rows Style</td>
+            <td>.setOddRowsStyle({ background: "#DDDDDD", separatorColor: "#BBBBBB"})</td>
         </tr>
         <tr>
-            <th>setEvenRowsStyle</th>
-            <th>@param {{ background: string; separatorColor: string; }} - Some new even rows style</th>
+            <td>setEvenRowsStyle</td>
+            <td>The Even Rows Style</td>
+            <td>.setEvenRowsStyle({ background: "#FFFFFF", separatorColor: "#BBBBBB"})</td>
         </tr>
     </tbody>
 </table>
