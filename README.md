@@ -138,8 +138,8 @@ You can take any existing preset and modify some of its values through those met
             <td>setBordersColors</td>
             <td>The Border Colors of the Searchbar / Dropdown depending on their states</td>
             <td>.setBorderColors({<br>
-                _default: "#CCCCCC",<br>
-                focus: "#0000FF" <br>
+                &nbsp;&nbsp;&nbsp;_default: "#CCCCCC",<br>
+                &nbsp;&nbsp;&nbsp;focus: "#0000FF" <br>
             })</td>
         </tr>
         <tr>
@@ -152,10 +152,10 @@ You can take any existing preset and modify some of its values through those met
             <td>The Table Header Style</td>
             <td>
                 .setTHStyle({<br>
-                    textColor: "#000000",<br>
-                    background: "#FFFFFF",<br>
-                    arrowColor: "#CCCCCC",<br>
-                    activeArrowColor: "#0000FF"<br>
+                    &nbsp;&nbsp;&nbsp;textColor: "#000000",<br>
+                    &nbsp;&nbsp;&nbsp;background: "#FFFFFF",<br>
+                    &nbsp;&nbsp;&nbsp;arrowColor: "#CCCCCC",<br>
+                    &nbsp;&nbsp;&nbsp;activeArrowColor: "#0000FF"<br>
                 })
             </td>
         </tr>
@@ -163,24 +163,24 @@ You can take any existing preset and modify some of its values through those met
             <td>setHoveredElementsStyle</td>
             <td>The Style for the hoverable elements</td>
             <td>.setHoveredElementsStyle({<br>
-                textColor: "#FFFFFF",<br>
-                background: "#0000FF"<br>
+                &nbsp;&nbsp;&nbsp;textColor: "#FFFFFF",<br>
+                &nbsp;&nbsp;&nbsp;background: "#0000FF"<br>
             })</td>
         </tr>
         <tr>
             <td>setOddRowsStyle</td>
             <td>The Odd Rows Style</td>
             <td>.setOddRowsStyle({<br>
-                background: "#DDDDDD",<br>
-                separatorColor: "#BBBBBB"<br>
+                &nbsp;&nbsp;&nbsp;background: "#DDDDDD",<br>
+                &nbsp;&nbsp;&nbsp;separatorColor: "#BBBBBB"<br>
             })</td>
         </tr>
         <tr>
             <td>setEvenRowsStyle</td>
             <td>The Even Rows Style</td>
             <td>.setEvenRowsStyle({ <br>
-                background: "#FFFFFF",<br>
-                separatorColor: "#BBBBBB"<br>
+                &nbsp;&nbsp;&nbsp;background: "#FFFFFF",<br>
+                &nbsp;&nbsp;&nbsp;separatorColor: "#BBBBBB"<br>
             })</td>
         </tr>
     </tbody>
