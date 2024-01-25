@@ -2,6 +2,8 @@ React Table Component Package (WIP)
 
 Forthcoming update : More Presets & An easy Way to build your own Presets.
 
+<img src="/public/basepreset.jpg">
+
 On NPM : https://www.npmjs.com/package/@asklddco/react-table
 
 DOCUMENTATION
@@ -12,7 +14,7 @@ DOCUMENTATION
 
 [2 - Using the Table Component](#step-2---using-the-table-component)
 
-[3 - Subcomponents (FYI only)](#subcomponents-/fyi-only/)
+[3 - Subcomponents (FYI only)](#subcomponents--fyi-only-)
 
 [4 - Presets & Adding the Font of your Choice ](#presets-and-adding-the-font-of-your-choice)
 
@@ -68,7 +70,7 @@ Here are the different methods to define your datatypes :
 
 As an example, building this model would qualify for such a data object :
 
-<img src="/public/3-userdatas-3.png"/>
+<img src="/public/3-userdatas-4.png"/>
 
 You would then end up with the following three sortable columns table :
 
@@ -80,7 +82,7 @@ Now that your tableModel is defined, it can be passed as a Prop with your Datas 
 
 <img src="/public/4-component-2.png"/>
 
-## Subcomponents /FYI only/
+## Subcomponents -FYI only-
 
 All those subcomponents are integrated by default. No customization is possible at the moment.
 
@@ -187,6 +189,7 @@ You can take any existing preset and modify some of its values through those met
             <td>.setOddRowsStyle({<br>
                 &nbsp;&nbsp;&nbsp;background: "#DDDDDD",<br>
                 &nbsp;&nbsp;&nbsp;separatorColor: "#BBBBBB"<br>
+                &nbsp;&nbsp;&nbsp;textColor: "#BBBBBB"<br>
             })</td>
         </tr>
         <tr>
@@ -195,11 +198,13 @@ You can take any existing preset and modify some of its values through those met
             <td>.setEvenRowsStyle({ <br>
                 &nbsp;&nbsp;&nbsp;background: "#FFFFFF",<br>
                 &nbsp;&nbsp;&nbsp;separatorColor: "#BBBBBB"<br>
+                &nbsp;&nbsp;&nbsp;textColor: "#BBBBBB"<br>
             })</td>
         </tr>
     </tbody>
 </table>
 <br>
-## Simple React example
+
+## Simple React Example
 
 <img src="/public/fullinit4.png">

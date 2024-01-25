@@ -18,11 +18,12 @@ class PresetClass {
     /**
      * @returns {IPreset} The preset object
      */
-    get() : IPreset {
+    get() : IPreset{
         return this.#preset
     }
 
     /**
+     * Set Global Font
      * @param {string} font - The global font
      * @returns {PresetClass}
      */
@@ -30,6 +31,16 @@ class PresetClass {
         this.#set({ ...this.#preset, global: { ...this.#preset.global, font: font } } as IPreset)
         return this
     }
+
+    /**
+     * Set Global Text Color
+     * @param {string} color - The global text color
+     * @returns {PresetClass}
+     */
+    /*setGlobalTextColor (color: string): PresetClass {
+        this.#set({ ...this.#preset, global: { ...this.#preset.global, textColor: color } } as IPreset)
+        return this
+    }*/
 
     /**
      * @param {{ _default: string; focus: string; }} colors - The border colors of the searchbar / dropdown depending on its state
@@ -44,6 +55,7 @@ class PresetClass {
     }
 
     /**
+     * Set the Last & First Separators Color
      * @param {string} color - The first & last separators color
      * @returns {PresetClass}
      */
@@ -55,6 +67,7 @@ class PresetClass {
     }
 
     /**
+     * Set the Header Style
      * @param {{ textColor: string; background: string; arrowColor: string; activeArrowColor: string; }} style - The table header style
      * @returns {PresetClass}
      */
@@ -70,7 +83,7 @@ class PresetClass {
     }
 
     /**
-     * Set the style for all elements the hoverable elements.
+     * Set the Style for all the Hoverable Elements.
      * @param {Object} options - The style options for the hover effect.
      * @param {string} options.textColor - The text color for the hover effect.
      * @param {string} options.background - The background color for the hover effect.
@@ -98,33 +111,38 @@ class PresetClass {
     }
 
     /**
-     * @param {{ background: string; separatorColor: string; }} style - The odd rows style
+     * Set the style for the Odd Rows
+     * @param {{ background: string; separatorColor: string; textColor? : string;}} style - The odd rows style
      * @returns {PresetClass}
      */
-    setOddRowsStyle ({ background, separatorColor }: { background: string; separatorColor: string; }): PresetClass {
+    setOddRowsStyle ({ background, separatorColor, textColor }: { background: string; separatorColor: string; textColor? : string;}): PresetClass {
         this.#set({ ...this.#preset, 
             oddRow : {...this.#preset.oddRow,
                 backgroundColor : {...this.#preset.oddRow.backgroundColor, default: background},
                 bottomSeparatorColor : separatorColor,
+                textColor : textColor ? {...this.#preset.oddRow.textColor, default : textColor} : {...this.#preset.oddRow.textColor},
             }
         } as IPreset)
         return this
     }
 
     /**
-     * @param {{ background: string; separatorColor: string; }} style - The even rows style
+     * Set the style for the Even Rows
+     * @param {{ background: string; separatorColor: string; textColor? : string;}} style - The even rows style
      * @returns {PresetClass}
      */
-    setEvenRowsStyle ({ background, separatorColor }: { background: string; separatorColor: string;}): PresetClass {
+    setEvenRowsStyle ({ background, separatorColor, textColor }: { background: string; separatorColor: string; textColor? : string;}): PresetClass {
         this.#set({ ...this.#preset, 
             evenRow : {...this.#preset.evenRow,
                 backgroundColor : {...this.#preset.evenRow.backgroundColor, default: background},
                 bottomSeparatorColor : separatorColor,
+                textColor : textColor ? {...this.#preset.evenRow.textColor, default : textColor} : {...this.#preset.evenRow.textColor},
             }
         } as IPreset)
         return this
     }
 
+    // !!! set pagination buttons color
 }
 
 export default PresetClass

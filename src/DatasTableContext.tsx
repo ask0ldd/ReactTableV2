@@ -2,8 +2,8 @@ import { createContext } from "react"
 import { reducerDispatchType } from "./hooks/useTableManager"
 import { TableModel } from "./models/TableModel"
 import { ITableState } from "./interfaces/ITableState"
-import { basePreset } from "./presets/basePreset"
 import { IPreset } from "./interfaces/IPreset"
+import { basePreset } from "./presets/basePreset"
 
 const initialContext : IDatasTableContext = {preset : basePreset.get()}
 

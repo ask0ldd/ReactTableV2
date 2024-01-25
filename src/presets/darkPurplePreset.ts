@@ -1,5 +1,6 @@
 import PresetClass from "./PresetClass";
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export const darkPurplePreset = new PresetClass({
     global: {
         font: "Jost",
