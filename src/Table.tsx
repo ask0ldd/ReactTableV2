@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useContext, useState } from "react"
+import { useContext, useState, isValidElement } from "react"
 import { DatasTableContext } from './DatasTableContext'
 import './style/Table.css'
 
@@ -25,7 +25,7 @@ function Table() {
     const rowsToDisplay = [...tableState.tableDAO.getProcessedDatas(tableState.getProcessingParameters())].slice(firstDisplayedEntry, lastDisplayedEntry)
 
     // defining elements styles
-    const thPreset = {color : preset.th.textColor, background : preset.th.backgroundColor, fontWeight:preset.th.fontWeight}
+    const thPreset = {color : preset.th.textColor, background : preset.th.backgroundColor, fontWeight:preset.th.fontWeight, textAlign : preset.th.textAlign}
     const oddRowPreset = {color : preset.oddRow.textColor.default, background : preset.oddRow.backgroundColor.default, borderBottom:'1px solid '+ preset.oddRow.bottomSeparatorColor}
     const evenRowPreset = {color : preset.evenRow.textColor.default, background : preset.evenRow.backgroundColor.default, borderBottom:'1px solid '+ preset.evenRow.bottomSeparatorColor}
     const arrowInactiveColor = {color: preset.th.arrow.inactiveColor}
@@ -37,27 +37,38 @@ function Table() {
       <table style={preset.global ? {background: preset.global.backgroundColor, fontFamily : preset.global.font, color : preset.global.textColor} : {}} id={tableModel.getTableId()} aria-label="Current Employees">
         <thead style={topSeparatorColor}>
           <tr style={{background : thPreset.background, border:'none'}}>
-          {[...tableModel.getColumnsNamesList()].map((name, index) => (
-            <th key={'thtable-'+index} style={{...thPreset, cursor:'pointer'}} onClick={() => {handleSortingClick(index)}}>{name}
-              <div className="arrowsContainer">
-                {tableModel.getColumns()[index].sortable && 
-                  <span style={tableState.sorting?.direction === "asc" && tableState.sorting?.column == tableAccessors[index] ? arrowActiveColor : arrowInactiveColor}>▲</span>}
-                {tableModel.getColumns()[index].sortable && 
-                  <span style={tableState.sorting?.direction === "desc" && tableState.sorting?.column == tableAccessors[index] ? arrowActiveColor : arrowInactiveColor}>▼</span>}
-              </div>
+          {tableModel.getColumnsNamesList().map((name, index) => (
+            <th key={'thtable-'+index} 
+                // different paddings if th must host the arrows
+                style={{...thPreset, cursor:'pointer', padding : tableModel.getColumns()[index].sortable ? '10px 36px 10px 18px' : '10px 18px 10px 18px', textAlign: tableModel.getColumns()[index].thAlignment}} 
+                onClick={() => {handleSortingClick(index)}}>{name}
+              {
+                // display arrows if sortable
+                tableModel.getColumns()[index].sortable && 
+                  <div className="arrowsContainer">
+                    <span style={tableState.sorting?.direction === "asc" && tableState.sorting?.column == tableAccessors[index] ? arrowActiveColor : arrowInactiveColor}>▲</span>
+                    <span style={tableState.sorting?.direction === "desc" && tableState.sorting?.column == tableAccessors[index] ? arrowActiveColor : arrowInactiveColor}>▼</span>
+                  </div>
+              }
             </th>))}
           </tr>
         </thead>
         <tbody style={topSeparatorColor}>
-          {[...rowsToDisplay].map((datarow, index) => (
+          {rowsToDisplay.map((datarow, index) => (
             <tr onMouseOut={() => setHoverTR(-1)} onMouseEnter={() => setHoverTR(index)}
                 style={ hoverTR === index ? hoverRowStyle
                 : {...isRowOdd(index) ? oddRowPreset : evenRowPreset, 
                 borderBottom : isLastRow(index, rowsToDisplay.length-1) ? 'none' : (isRowOdd(index) ? oddRowPreset.borderBottom : evenRowPreset.borderBottom)}} 
                 key={'trtable-'+index} className={isRowOdd(index) + isLastRow(index, rowsToDisplay.length-1)}>
-              {[...tableAccessors].map((key : string) => (
-                <td key={'tdtable-'+key+'-'+index}>{datarow[key as keyof typeof datarow]}</td>
-              ))}
+              {
+                tableModel.getColumns().map((column, index2) => {
+                  // display custom component
+                  if(column.component && isValidElement(column.component(index))) return (column.component(index, datarow)) // rowdatas datarow
+                  // or display datas
+                  const key = column.accessor
+                  return(<td key={'tdtable-'+key+'-'+index2+index}>{key && datarow[key as keyof typeof datarow]}</td>)
+                })
+              }
             </tr>
           ))}
         </tbody>

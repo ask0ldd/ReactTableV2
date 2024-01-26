@@ -9,6 +9,7 @@ export const darkPurplePreset = new PresetClass({
     },
     th: {
         textColor: "#918AAD",
+        textAlign: "left",
         fontWeight: "600",
         backgroundColor: "#1B1A23",
         arrow : { activeColor : "#693faf", inactiveColor : "#7D769BFF" },

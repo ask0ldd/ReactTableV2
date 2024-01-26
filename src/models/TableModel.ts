@@ -39,15 +39,22 @@ export class TableModel{
      * @returns {Array<string>} Array of column names.
      */
     getColumnsNamesList() : Array<string>{
-        return this.#columns.reduce((accu : Array<string>, column) => {accu.push(column.th); return accu}, [])
+        return this.#columns.reduce((accu : Array<string>, column) => {
+          if(column.th == null) return accu
+          accu.push(column.th); return accu
+        }, [])
     }
 
     /**
      * Get the list of accessors.
      * @returns {Array<string>} Array of accessors.
      */  
-    getAccessorsList() : Array<string>{
-      return this.#columns.reduce((accu : Array<string>, column) => {accu.push(column.accessor); return accu}, [])
+    getAccessorsList() : Array<string | null>{
+      return this.#columns.reduce((accu : Array<string | null>, column) => {
+        if(column.component == null && column.accessor == null) return accu
+        accu.push(column.accessor)
+        return accu
+      }, [])
     }
 
     /**

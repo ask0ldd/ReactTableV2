@@ -75,10 +75,11 @@ class PresetClass {
     * @param {string} options.activeArrowColor - The active arrow color.
     * @returns {PresetClass} - The updated preset class.
     */
-    setTHStyle ({ textColor, background, arrowColor, activeArrowColor }: { textColor: string; background: string; arrowColor: string; activeArrowColor: string; }): PresetClass {
+    setTHStyle ({ textColor, textAlign, background, arrowColor, activeArrowColor }: { textColor: string; textAlign: string; background: string; arrowColor: string; activeArrowColor: string; }): PresetClass {
         this.#set({ ...this.#preset, 
             th : {...this.#preset.th,
                 textColor,
+                textAlign,
                 backgroundColor : background,
                 arrow : {activeColor : activeArrowColor, inactiveColor : arrowColor}
             }

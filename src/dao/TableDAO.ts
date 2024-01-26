@@ -62,8 +62,8 @@ export class TableDAO{
         const frCollator = new Intl.Collator('en')
         if(dataType === 'date'){
             switch(sortingRules.direction){
-               case 'asc' : return datas.sort((a,b) => this.#dateToTime(b[sortingRules.column]) - this.#dateToTime(a[sortingRules.column]))
-               case 'desc' : return datas.sort((a,b) => this.#dateToTime(a[sortingRules.column]) - this.#dateToTime(b[sortingRules.column]))
+                case 'asc' : return datas.sort((a,b) => this.#dateToTime(a[sortingRules.column]) - this.#dateToTime(b[sortingRules.column]))
+                case 'desc' : return datas.sort((a,b) => this.#dateToTime(b[sortingRules.column]) - this.#dateToTime(a[sortingRules.column]))
             }
         }
         switch(sortingRules.direction){

@@ -20,9 +20,9 @@ DOCUMENTATION
 
 [5 - Presets Deeper Customization](#presets-deeper-customization)
 
-[6 - Simple React Example ](#simple-react-example)
+[6 - Adding some Custom Cells to Your Table](#adding-some-custom-cells)
 
-[7 - Adding some Custom Cells to Your Table](#adding-some-custom-cells)
+[7 - Simple React Example ](#simple-react-example)
 
 ## Step 1 - Build your Table Model
 

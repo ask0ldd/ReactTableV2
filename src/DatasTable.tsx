@@ -37,6 +37,8 @@ export function DatasTable({tableModel, tableDatas, preset} : IProps){
         const tableDatasPropertiesList = Object.getOwnPropertyNames(tableDatas[0])
         // check if all accessors can be linked to a tabledatas key
         tableModel.getAccessorsList().forEach(accessor => {
+            // ignoring null accessor linked to custom components
+            if(accessor == null) return
             if(tableDatasPropertiesList.includes(accessor) === false) areAllMatching = false
             if(!areAllMatching) throw new Error("Some Accessors don't exist into the provided Dataset.")
         })

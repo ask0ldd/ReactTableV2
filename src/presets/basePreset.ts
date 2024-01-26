@@ -10,10 +10,11 @@ export const basePreset = new PresetClass(
         },
         th: {
             textColor: "#213547",
+            textAlign: "left",
             fontWeight: "600",
             backgroundColor: "none",
             arrow: { activeColor: "rgb(0, 120, 215)", inactiveColor: "#ddd" },
-            separatorColor: "#111"
+            separatorColor: "#111",
         },
         evenRow: {
             backgroundColor: { default: "none", hover: "linear-gradient(360deg, #2c91e4cc, #2c91e4aa)" },

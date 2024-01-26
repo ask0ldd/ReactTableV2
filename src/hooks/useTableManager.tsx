@@ -67,7 +67,7 @@ function useTableManager(tableModel : TableModel, tableDatas : Array<any>){
             const newRowPropertiesList = Object.getOwnPropertyNames(newRow)
             if(accessors.length !== newRowPropertiesList.length) return state
             accessors.forEach(accessor => {
-                if(newRowPropertiesList.includes(accessor) === false) return state // !!!!! should throw
+                if(accessor == null || newRowPropertiesList.includes(accessor) === false) return state // !!!!! should throw
             })
 
             state.tableDAO.addRow(newRow)

@@ -1,3 +1,5 @@
+import TAlignment from "../types/TAlignment"
+
 /*
 add font size
 */
@@ -10,6 +12,7 @@ export interface IPreset {
     },
     th : {
         textColor : string,
+        textAlign: TAlignment,
         fontWeight: string,
         backgroundColor : string,
         arrow : {activeColor : string, inactiveColor : string}

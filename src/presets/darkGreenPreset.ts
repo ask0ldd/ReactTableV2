@@ -9,6 +9,7 @@ export const darkGreenPreset = new PresetClass({
     },
     th: {
         textColor: "#918AAD",
+        textAlign: "left",
         fontWeight: "600",
         backgroundColor: "#1B1A23",
         arrow : {activeColor : "#20A073", inactiveColor : "#7D769BFF"},
