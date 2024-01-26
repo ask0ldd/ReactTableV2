@@ -20,9 +20,9 @@ DOCUMENTATION
 
 [5 - Presets Deeper Customization](#presets-deeper-customization)
 
-[6 - Adding some Custom Cells to Your Table](#adding-some-custom-cells)
+[6 - Adding some Custom Cells & Buttons to Your Table](#adding-some-custom-cells)
 
-[7 - Simple React Example ](#simple-react-example)
+[7 - Summary - Simple React Example ](#simple-react-example)
 
 ## Step 1 - Build your Table Model
 
@@ -57,7 +57,8 @@ As expected, with :
     </tr>
 </thead>
 <tbody>
-    <tr><td><b>setColumnName("name", "align-left" | "align-center" | "align-right")</b></td><td>We give a name to our column and specify its alignment</td></tr>
+    <tr><td><b>setColumnName("name")</b></td><td>We give a name to our column</td></tr>
+    <tr><td><b>setColumnName("name", "align-left" | "align-center" | "align-right")</b></td><td>Overrides the default preset alignment for this TH</td></tr>
     <tr><td><b>setDatatypeAsString()</b></td><td>We define the data type that should populate my column. Here it should be populated with strings</td></tr>
     <tr><td><b>setAccessor("accessor")</b></td><td>We specifie the key in the data object associated with the value needed to fill the column</td></tr>
     <tr><td><b>SetSortability(boolean)</b></td><td>We indicate to our model if our column should be sortable or not</td></tr>
@@ -172,6 +173,7 @@ You can take any existing preset and modify some of its values through those met
             <td>
                 .setTHStyle({<br>
                     &nbsp;&nbsp;&nbsp;textColor: "#000000",<br>
+                    &nbsp;&nbsp;&nbsp;textAlign: "left",<br>
                     &nbsp;&nbsp;&nbsp;background: "#FFFFFF",<br>
                     &nbsp;&nbsp;&nbsp;arrowColor: "#CCCCCC",<br>
                     &nbsp;&nbsp;&nbsp;activeArrowColor: "#0000FF"<br>
@@ -210,13 +212,26 @@ You can take any existing preset and modify some of its values through those met
 
 ## Adding Some Custom Cells
 
+### Custom Cell Component
+
 You can fill a whole column with a custom component of your choice. It's really handy when you want to add buttons to your table that can trigger custom interactions.
 
 Here is an example :
+<br>
+<img src ="/public/customcomponent.png">
+<br>
+Notice that your component should take index and dataRow as parameters. Why? Beacause these datas will be passed to your component at render so you can use them to trigger any behavior you want.
+<br>
 
-Notice that your component should take index and dataRow as parameters. Since each time we render your component, we are passing the id of the row and the whole row dataset so you can use it to trigger any behavior you want.
+### Building a Table with this Custom Component
 
+<br>
+<img src="/public/tablecustomrowcode.png">
+<br>
 Here is how the previous example would be rendered inside your table :
+<br>
+<img src="/public/tablewithicons2.png">
+<br>
 
 ## Simple React Example
 

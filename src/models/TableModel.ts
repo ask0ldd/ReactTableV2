@@ -17,12 +17,12 @@ export class TableModel{
 
     /**
      * Add a column to the table model.
-     * @param {Column | undefined} column - The column to add.
+     * @param {Column} column - The column to add.
      * @returns {TableModel} The TableModel instance.
      */
     addColumn(column : Column | undefined){
-      if(column == null || column.toObject() == null) return
-      this.#columns.push(column.toObject() as IColumnDefElement)
+      if(column == null || column.toObject() == null) throw new Error("This column is undefined.")
+      this.#columns.push(column.toObject())
       return this
     }
   
@@ -39,7 +39,7 @@ export class TableModel{
      * @returns {Array<string>} Array of column names.
      */
     getColumnsNamesList() : Array<string>{
-        return this.#columns.reduce((accu : Array<string>, column) => {
+        return this.#columns.reduce<Array<string>>((accu, column) => {
           if(column.th == null) return accu
           accu.push(column.th); return accu
         }, [])
@@ -50,7 +50,7 @@ export class TableModel{
      * @returns {Array<string>} Array of accessors.
      */  
     getAccessorsList() : Array<string | null>{
-      return this.#columns.reduce((accu : Array<string | null>, column) => {
+      return this.#columns.reduce<Array<string | null>>((accu, column) => {
         if(column.component == null && column.accessor == null) return accu
         accu.push(column.accessor)
         return accu

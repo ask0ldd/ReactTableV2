@@ -1,3 +1,4 @@
+import TAlignment from "../types/TAlignment"
 import { TCustomComponent } from "../types/TCustomComponent"
 
 export interface IColumnDefElement 
@@ -7,5 +8,5 @@ export interface IColumnDefElement
   sortable : boolean
   datatype : 'string' | 'number' | 'date' | 'custom_component' | null
   component? : TCustomComponent | null
-  thAlignment? : 'left' | 'center' | 'right'
+  thAlignment? : TAlignment | 'preset'
 }

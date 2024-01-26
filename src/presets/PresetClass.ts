@@ -1,4 +1,5 @@
 import { IPreset } from "../interfaces/IPreset";
+import TAlignment from "../types/TAlignment";
 
 class PresetClass {
     #preset : IPreset
@@ -70,12 +71,13 @@ class PresetClass {
     * Set the Header Style
     * @param {Object} options - The style options.
     * @param {string} options.textColor - The text color.
+    * @param {string} options.textAlign - The text alignment.
     * @param {string} options.background - The background color.
     * @param {string} options.arrowColor - The arrow color.
     * @param {string} options.activeArrowColor - The active arrow color.
     * @returns {PresetClass} - The updated preset class.
     */
-    setTHStyle ({ textColor, textAlign, background, arrowColor, activeArrowColor }: { textColor: string; textAlign: string; background: string; arrowColor: string; activeArrowColor: string; }): PresetClass {
+    setTHStyle ({ textColor, textAlign, background, arrowColor, activeArrowColor }: { textColor: string; textAlign: TAlignment; background: string; arrowColor: string; activeArrowColor: string; }): PresetClass {
         this.#set({ ...this.#preset, 
             th : {...this.#preset.th,
                 textColor,

@@ -1,3 +1,5 @@
+import TDirection from "../types/TDirection"
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export class TableDAO{
 
@@ -53,11 +55,11 @@ export class TableDAO{
     /**
      * Gets the sorted data array based on the provided parameters.
      * @param {string} searchString - The search string.
-     * @param {{ column: string, direction: "asc" | "desc" }} sortingRules - The sorting rules.
+     * @param {{ column: string, direction: TDirection }} sortingRules - The sorting rules.
      * @param {string} dataType - The data type.
      * @returns {Array<any>} - The sorted data array.
      */
-    getSortedDatas(searchString : string, sortingRules : {column : string, direction : "asc" | "desc"}, dataType : string){
+    getSortedDatas(searchString : string, sortingRules : {column : string, direction : TDirection}, dataType : string){
         const datas = this.getFilteredDatas(searchString)
         const frCollator = new Intl.Collator('en')
         if(dataType === 'date'){
@@ -74,10 +76,10 @@ export class TableDAO{
 
     /**
      * Gets the processed data array based on the provided processing arguments.
-     * @param {{ search: string, sorting: { column: string, direction: "asc" | "desc" }, datatype: string }} processingArgs - The processing arguments.
+     * @param {{ search: string, sorting: { column: string, direction: TDirection }, datatype: string }} processingArgs - The processing arguments.
      * @returns {Array<any>} - The processed data array.
      */
-    getProcessedDatas(processingArgs : { search : string, sorting : {column : string, direction : "asc" | "desc"}, datatype : string }){
+    getProcessedDatas(processingArgs : { search : string, sorting : {column : string, direction : TDirection}, datatype : string }){
         return this.getSortedDatas(processingArgs.search, processingArgs.sorting, processingArgs.datatype)
     }
 
