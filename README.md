@@ -22,6 +22,8 @@ DOCUMENTATION
 
 [6 - Simple React Example ](#simple-react-example)
 
+[7 - Adding some Custom Cells to Your Table](#adding-some-custom-cells)
+
 ## Step 1 - Build your Table Model
 
 The Table Model is essential for defining the relationships between the displayed table and the data object.
@@ -55,10 +57,11 @@ As expected, with :
     </tr>
 </thead>
 <tbody>
-    <tr><td><b>setColumnName()</b></td><td>We give a name to our column</td></tr>
+    <tr><td><b>setColumnName("name", "align-left" | "align-center" | "align-right")</b></td><td>We give a name to our column and specify its alignment</td></tr>
     <tr><td><b>setDatatypeAsString()</b></td><td>We define the data type that should populate my column. Here it should be populated with strings</td></tr>
-    <tr><td><b>setAccessor()</b></td><td>We specifie the key in the data object associated with the value needed to fill the column</td></tr>
-    <tr><td><b>SetSortability()</b></td><td>We indicate to our model if our column should be sortable or not</td></tr>
+    <tr><td><b>setAccessor("accessor")</b></td><td>We specifie the key in the data object associated with the value needed to fill the column</td></tr>
+    <tr><td><b>SetSortability(boolean)</b></td><td>We indicate to our model if our column should be sortable or not</td></tr>
+    <tr><td><b>setCustomComponent(customCell)</b></td><td>Each row of our column will contain the same custom cell (cf. "adding custom cells" section)</td></tr>
 </tbody>
 </table>
 <BR>
@@ -204,6 +207,16 @@ You can take any existing preset and modify some of its values through those met
     </tbody>
 </table>
 <br>
+
+## Adding Some Custom Cells
+
+You can fill a whole column with a custom component of your choice. It's really handy when you want to add buttons to your table that can trigger custom interactions.
+
+Here is an example :
+
+Notice that your component should take index and dataRow as parameters. Since each time we render your component, we are passing the id of the row and the whole row dataset so you can use it to trigger any behavior you want.
+
+Here is how the previous example would be rendered inside your table :
 
 ## Simple React Example
 

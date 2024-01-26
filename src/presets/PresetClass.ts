@@ -67,10 +67,14 @@ class PresetClass {
     }
 
     /**
-     * Set the Header Style
-     * @param {{ textColor: string; background: string; arrowColor: string; activeArrowColor: string; }} style - The table header style
-     * @returns {PresetClass}
-     */
+    * Set the Header Style
+    * @param {Object} options - The style options.
+    * @param {string} options.textColor - The text color.
+    * @param {string} options.background - The background color.
+    * @param {string} options.arrowColor - The arrow color.
+    * @param {string} options.activeArrowColor - The active arrow color.
+    * @returns {PresetClass} - The updated preset class.
+    */
     setTHStyle ({ textColor, background, arrowColor, activeArrowColor }: { textColor: string; background: string; arrowColor: string; activeArrowColor: string; }): PresetClass {
         this.#set({ ...this.#preset, 
             th : {...this.#preset.th,
