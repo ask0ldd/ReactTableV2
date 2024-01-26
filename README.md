@@ -217,7 +217,7 @@ You can take any existing preset and modify some of its values through those met
 You can fill a whole column with a custom component of your choice. It's really handy when you want to add buttons to your table that can trigger custom interactions.
 
 Here is an example :
-<br>
+<br><br>
 <img src ="/public/customcomponent.png">
 <br>
 Notice that your component should take index and dataRow as parameters. Why? Beacause these datas will be passed to your component at render so you can use them to trigger any behavior you want.
@@ -225,8 +225,7 @@ Notice that your component should take index and dataRow as parameters. Why? Bea
 
 ### Building a Table with this Custom Component
 
-<br>
-<img src="/public/tablecustomrowcode.png">
+<img src="/public/tablecustomrowcode2.png">
 <br>
 Here is how the previous example would be rendered inside your table :
 <br>
