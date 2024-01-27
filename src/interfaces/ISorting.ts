@@ -1,4 +1,6 @@
+import TDirection from "../types/TDirection"
+
 export interface ISorting{
     column : string
-    direction : 'asc' | 'desc'
+    direction : TDirection
 }

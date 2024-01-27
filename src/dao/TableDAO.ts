@@ -31,7 +31,7 @@ export class TableDAO{
 
     /**
      * Adds a row to the data array.
-     * @param {object} row - The row to add.
+     * @param {any} row - The row to add.
      */
     addRow(row : object){
         this.#datas = [...this.#datas, row]

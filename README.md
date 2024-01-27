@@ -3,18 +3,20 @@ React Table Component Package (WIP)
 Forthcoming update : More Presets & An easy Way to build your own Presets.
 
 <img src="/public/basepreset.jpg">
-
+  
 On NPM : https://www.npmjs.com/package/@asklddco/react-table
-
+  
+    
+      
 DOCUMENTATION
-
+  
 ## Table Of Content
-
+  
 [1 - Build Your Table Model](#step-1---build-your-table-model)
 
 [2 - Using the Table Component](#step-2---using-the-table-component)
 
-[3 - Subcomponents (FYI only)](#subcomponents--fyi-only-)
+[3 - Customization through props](#customization-through-props)
 
 [4 - Presets & Adding the Font of your Choice ](#presets-and-adding-the-font-of-your-choice)
 
@@ -24,31 +26,32 @@ DOCUMENTATION
 
 [7 - Summary - Simple React Example ](#simple-react-example)
 
+<hr>
+  
 ## Step 1 - Build your Table Model
-
+  
 The Table Model is essential for defining the relationships between the displayed table and the data object.
-
+  
 Let's now build this model into the react page component that will host your react table.
-
+  
 ### A - Instanciate the TableModel and give it a name :
-
-<br>
+  
 <img src="/public/1-createmodel-2.png"/>
-
+  
 This model will be key in order to define the following properties :
-
+  
+  
 - Which specific datas should be extracted from your data object.
 - Of which types those datas are. Mandatory since it will auto-define a sorting algorithm.
 - Which name should be given to your columns (your '< th >' tag content).
 - Are some of your columns sortable ?
-
+  
 ### B - Using the ColumnBuilder, you should now add some columns to your model :
-
-<br>
+  
 <img src="/public/2-addcolumns-4.png"/>
-
+  
 As expected, with :
-
+  
 <table>
 <thead>
     <tr>
@@ -65,81 +68,126 @@ As expected, with :
     <tr><td><b>setCustomComponent(customCell)</b></td><td>Each row of our column will contain the same custom cell (cf. "adding custom cells" section)</td></tr>
 </tbody>
 </table>
-<BR>
+  
+    
 Here are the different methods to define your datatypes :
-
+  
+  
 - setDatatypeAsString()
 - setDatatypeAsNumber()
 - setDatatypeAsDate()
-
+  
+  
 As an example, building this model would qualify for such a data object :
-
+  
 <img src="/public/3-userdatas-4.png"/>
-
+  
 You would then end up with the following three sortable columns table :
-
+  
 <img src="/public/5-tableexample.png"/>
-
+  
+    
+       
+<hr>
+  
 ## Step 2 - Using the Table Component
-
+  
 Now that your tableModel is defined, it can be passed as a Prop with your Datas Object to our Component :
-
+  
 <img src="/public/4-component-2.png"/>
-
-## Subcomponents -FYI only-
-
-All those subcomponents are integrated by default. No customization is possible at the moment.
-
+  
+    
+      
+<hr>
+  
+## Customization through props
+  
+### Defining the number of rows by default
+  
+`<DatasTable tableModel={tableModel} tableDatas={tableDatas} nRowsDefault={25}/>`
+  
+nRowsDefault possible values : [10, 25, 50, 100]
+  
+### Subcomponents
+  
+All those subcomponents are integrated by default.
+  
 <img src="/public/6-subcomponents.png">
+  
+### Hiding some Subcomponents
+  
+You can hide some of those subcomponents passing the following props to your Datatable component :
 
+<table>
+<thead>
+    <tr>
+        <th>Prop</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+    <tr><td><b>hidePagination</b></td><td>true | false : boolean</td>Hide both pagination components under the Table</tr>
+    <tr><td><b>hideSearchBar</b></td><td>true | false : boolean</td>Hide the search component in the top right corner</tr>
+    <tr><td><b>hideNRowsSelect</b></td><td>true | false : boolean</td>Hide the select component in the top left corner</tr>
+</tbody>
+</table>
+  
+    
+      
+<hr>
+  
 ## Presets and Adding the Font of your Choice
-
+  
 ### Presets
-
+  
 To use a Preset, simply pass it as a Prop. Here is a list of the 4 available presets (more to come) :
-
+  
 ##### Base Preset :
-
+  
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={basePreset.get()}/>`
-
+  
 <img src="/public/basepreset.jpg">
-
+  
 ##### LightPurple Preset :
-
+  
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={lightPurplePreset.get()}/>`
-
+  
 <img src="/public/lightpurplepreset.jpg">
-
+  
 ##### DarkGreen Preset :
-
+  
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkGreenPreset.get()}/>`
-
+  
 <img src="/public/darkgreenpreset.jpg">
-
+  
 ##### DarkPurple Preset :
-
+  
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.get()}/>`
-
+  
 <img src="/public/darkpurplepreset.jpg">
-
+  
 ### Add the Font of Your Choice
-
+  
 To replace a preset's default font, use the setGlobalFont method and pass the desired font family value as a parameter, similar to the CSS font-family property.
-
+  
 `<DatasTable tableModel={tableModel} tableDatas={tableDatas} preset={darkPurplePreset.setGlobalFont("Arial").get()}/>`
-
+  
+    
+      
+<hr>
+  
 ## Presets Deeper Customization
-
+  
 ### Example using the setGlobalFont & the setHoveredElementsStyle methods :
-
-<br>
+  
 <img src="/public/customizedpreset.png">
-
+  
+    
 ### All Available Customization Methods
-
-<br>
+  
 You can take any existing preset and modify some of its values through those methods :
-
+  
 <table>
     <thead>
         <tr>
@@ -208,30 +256,37 @@ You can take any existing preset and modify some of its values through those met
         </tr>
     </tbody>
 </table>
-<br>
-
+  
+    
+       
+<hr>
+  
 ## Adding Some Custom Cells
-
+  
 ### Custom Cell Component
-
+  
 You can fill a whole column with a custom component of your choice. It's really handy when you want to add buttons to your table that can trigger custom interactions.
-
+  
 Here is an example :
-<br><br>
+  
 <img src ="/public/customcomponent.png">
-<br>
+  
+    
 Notice that your component should take index and dataRow as parameters. Why? Beacause these datas will be passed to your component at render so you can use them to trigger any behavior you want.
-<br>
-
+  
+    
 ### Building a Table with this Custom Component
-
+  
 <img src="/public/tablecustomrowcode2.png">
-<br>
+  
 Here is how the previous example would be rendered inside your table :
-<br>
+  
 <img src="/public/tablewithicons2.png">
-<br>
-
+  
+    
+       
+<hr>
+  
 ## Simple React Example
-
+  
 <img src="/public/fullinit4.png">

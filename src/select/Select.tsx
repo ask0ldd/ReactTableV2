@@ -2,7 +2,7 @@
 import './style/Select.css'
 import SelectComboBox from "./ComboBox"
 import OptionsList from "./OptionsList"
-import {useState, useRef, useContext} from 'react'
+import {useState, useRef, useContext, useEffect} from 'react'
 import { useKeyboardHandler } from './hooks/useKeyboardHandler'
 import { SelectContext } from './contexts/SelectContext'
 import { DatasTableContext } from '../DatasTableContext'
@@ -18,7 +18,7 @@ import { DatasTableContext } from '../DatasTableContext'
  * @param {function} props.onValueChange - Function triggered when selecting a new option.
  * @return ( <CustomSelect formGroupState={formGroupState} options={options} selectId={selectId} labelledBy={labelledBy} onValueChange={onValueChange}/> )
  */
-function Select({ options, selectId } : IProps){ // should be able to pass the id of the element labelling the select
+function Select({ options, selectId, nRowsDefault } : IProps){ // should be able to pass the id of the element labelling the select
 
     const NDisplayedOptions = options || [ {label : '10', value : '10'}, {label : '25', value : '25'}, {label : '50', value : '50'}, {label : '100', value : '100'}]
     const {dispatch} = useContext(DatasTableContext)
@@ -28,6 +28,13 @@ function Select({ options, selectId } : IProps){ // should be able to pass the i
         activeOptionRef.current = {...option}
         updateNumberEntriesPerPage(parseInt(option.value))
     }
+
+    // register nRowsDefault
+    useEffect(() => {
+        if(nRowsDefault == null) return
+        const defaultOption = NDisplayedOptions.find(option => parseInt(option.value) === nRowsDefault)
+        if(defaultOption != null ) setActiveOption(defaultOption)
+    }, [nRowsDefault])
 
     /**
      * Update the number of entries per page.
@@ -78,4 +85,5 @@ export interface IOption{
 interface IProps{
     options? : Array<IOption>
     selectId : string
+    nRowsDefault ?: number
 }

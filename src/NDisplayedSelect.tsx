@@ -9,7 +9,7 @@ import { DatasTableContext } from './DatasTableContext'
  * @Component
  * @return ( <NDisplayedSelect/> )
  */
-function NDisplayedSelect() 
+function NDisplayedSelect({nRowsDefault} : {nRowsDefault? : number}) 
 {
     /*const NDisplayedOptions = ['10', '25', '50', '100']
     const {dispatch} = useContext(DatasTableContext)*/
@@ -29,7 +29,7 @@ function NDisplayedSelect()
                         (<option value={parseInt(opt)} key={'opt'+index}>{opt}</option>))
                 }
             </select>*/}
-            <Select selectId={"nDisplayed"}/>
+            <Select selectId={"nDisplayed"} nRowsDefault={nRowsDefault}/>
             entries
         </div>
     )

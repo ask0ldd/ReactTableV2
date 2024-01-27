@@ -24,9 +24,10 @@ import { basePreset } from './presets/basePreset'
  * @param {boolean} props.tableModel.getColumns[].sortable - Sortability of the column.
  * @param {string} props.tableModel.getColumns[].datatype - Type of the datas populating the column.
  * @param {Object[]} props.tableDatas - Datas used to populate the table.
+ * @param {number} props.nRowsDefault - Number of rows displayed by default
  * @return ( <DatasTable tableModel={tableModel} tableDatas={tableDatas}/> )
  */
-export function DatasTable({tableModel, tableDatas, preset} : IProps){
+export function DatasTable({tableModel, tableDatas, preset, nRowsDefault, hideNRowsSelect, hideSearchBar, hidePagination} : IProps){
 
     // [perfs] tableModel & tableDatas props already triggering a re-render (being props), so no need of useState
     const isColumnsDefinitionMatchingDatas = useMemo(() => {
@@ -52,15 +53,15 @@ export function DatasTable({tableModel, tableDatas, preset} : IProps){
             { isColumnsDefinitionMatchingDatas ? 
                 // providing model, datas & dispatch fn to the children components
                 <DatasTableContext.Provider value={{tableModel, dispatch, tableState, preset : preset || basePreset.get()}}>
-                    <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor} : {}} id="entriesNSearchContainer">
-                        <NDisplayedSelect/>                        
-                        <SearchModule/>
-                    </div>
+                    {(!hideNRowsSelect || !hideSearchBar) && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor} : {}} id="entriesNSearchContainer">
+                        {!hideNRowsSelect && <NDisplayedSelect nRowsDefault={nRowsDefault}/>}
+                        {!hideSearchBar && <SearchModule/>}
+                    </div>}
                     <Table/>
-                    <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor} : {}} id="infosNPaginationContainer">
+                    {!hidePagination && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor} : {}} id="infosNPaginationContainer">
                         <NEntries/>
                         <Pagination/>
-                    </div>
+                    </div>}
                 </DatasTableContext.Provider> 
                 : <div>Users datas are missing some mandatory dataKeys.</div>
             }
@@ -75,4 +76,8 @@ interface IProps {
     tableModel : TableModel
     tableDatas : Array<any>
     preset? : IPreset
+    nRowsDefault? : number
+    hideNRowsSelect ?: boolean
+    hideSearchBar ?: boolean
+    hidePagination ?: boolean
 }
