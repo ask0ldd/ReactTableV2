@@ -127,9 +127,9 @@ You can hide some of those subcomponents passing the following props to your Dat
     </tr>
 </thead>
 <tbody>
-    <tr><td><b>hidePagination</b></td><td>true | false : boolean</td>Hide both pagination components under the Table</tr>
-    <tr><td><b>hideSearchBar</b></td><td>true | false : boolean</td>Hide the search component in the top right corner</tr>
-    <tr><td><b>hideNRowsSelect</b></td><td>true | false : boolean</td>Hide the select component in the top left corner</tr>
+    <tr><td><b>hidePagination</b></td><td>true | false : boolean</td><td>Hide both pagination components under the Table</td></tr>
+    <tr><td><b>hideSearchBar</b></td><td>true | false : boolean</td><td>Hide the search component in the top right corner</td></tr>
+    <tr><td><b>hideNRowsSelect</b></td><td>true | false : boolean</td><td>Hide the select component in the top left corner</td></tr>
 </tbody>
 </table>
   
