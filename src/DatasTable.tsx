@@ -52,20 +52,33 @@ export function DatasTable({tableModel, tableDatas, preset, nRowsDefault, hideNR
 
     return(
         <>
-            {preset?.global.font === "'Jost', sans-serif" &&
+            {preset?.global.font === "'Jost', sans-serif" ?
                 <style>
                     @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap");
+                    box-sizing: border-box;
+                    margin: 0px;
+                    padding: 0px;
+                    text-decoration: none;
+                    list-style: none;
+                </style>
+                :
+                <style>
+                    box-sizing: border-box;
+                    margin: 0px;
+                    padding: 0px;
+                    text-decoration: none;
+                    list-style: none;
                 </style>
             }
             { isColumnsDefinitionMatchingDatas ? 
                 // providing model, datas & dispatch fn to the children components
                 <DatasTableContext.Provider value={{tableModel, dispatch, tableState, preset : preset || basePreset.get()}}>
-                    {(!hideNRowsSelect || !hideSearchBar) && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor} : {}} id="entriesNSearchContainer">
+                    {(!hideNRowsSelect || !hideSearchBar) && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, display: 'flex', justifyContent: 'space-between', width: '100%'} : {display: 'flex', justifyContent: 'space-between', width: '100%'}} id="entriesNSearchContainer">
                         {!hideNRowsSelect && <NDisplayedSelect nRowsDefault={nRowsDefault}/>}
                         {!hideSearchBar && <SearchModule/>}
                     </div>}
                     <Table/>
-                    {!hidePagination && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor} : {}} id="infosNPaginationContainer">
+                    {!hidePagination && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, display: 'flex', justifyContent: 'space-between', width: '100%'} : {display: 'flex', justifyContent: 'space-between', width: '100%'}} id="infosNPaginationContainer">
                         <NEntries/>
                         <Pagination/>
                     </div>}
