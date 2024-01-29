@@ -73,12 +73,12 @@ export function DatasTable({tableModel, tableDatas, preset, nRowsDefault, hideNR
             { isColumnsDefinitionMatchingDatas ? 
                 // providing model, datas & dispatch fn to the children components
                 <DatasTableContext.Provider value={{tableModel, dispatch, tableState, preset : preset || basePreset.get()}}>
-                    {(!hideNRowsSelect || !hideSearchBar) && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, display: 'flex', justifyContent: 'space-between', width: '100%'} : {display: 'flex', justifyContent: 'space-between', width: '100%'}} id="entriesNSearchContainer">
+                    {(!hideNRowsSelect || !hideSearchBar) && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '0.5rem'} : {display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '0.5rem'}} id="entriesNSearchContainer">
                         {!hideNRowsSelect && <NDisplayedSelect nRowsDefault={nRowsDefault}/>}
                         {!hideSearchBar && <SearchModule/>}
                     </div>}
                     <Table/>
-                    {!hidePagination && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, display: 'flex', justifyContent: 'space-between', width: '100%'} : {display: 'flex', justifyContent: 'space-between', width: '100%'}} id="infosNPaginationContainer">
+                    {!hidePagination && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '0.25rem'} : {display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '0.25rem'}} id="infosNPaginationContainer">
                         <NEntries/>
                         <Pagination/>
                     </div>}
