@@ -117,7 +117,7 @@ All those subcomponents are integrated by default.
 ### Hiding some Subcomponents
   
 You can hide some of those subcomponents passing the following props to your Datatable component :
-
+  
 <table>
 <thead>
     <tr>

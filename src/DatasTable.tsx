@@ -48,8 +48,15 @@ export function DatasTable({tableModel, tableDatas, preset, nRowsDefault, hideNR
 
     const {tableState, dispatch} = useTableManager(tableModel, [...tableDatas])
 
+    
+
     return(
         <>
+            {preset?.global.font === "'Jost', sans-serif" &&
+                <style>
+                    @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap");
+                </style>
+            }
             { isColumnsDefinitionMatchingDatas ? 
                 // providing model, datas & dispatch fn to the children components
                 <DatasTableContext.Provider value={{tableModel, dispatch, tableState, preset : preset || basePreset.get()}}>
