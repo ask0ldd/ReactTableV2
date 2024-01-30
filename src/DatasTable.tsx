@@ -48,10 +48,16 @@ export function DatasTable({tableModel, tableDatas, preset, nRowsDefault, hideNR
 
     const {tableState, dispatch} = useTableManager(tableModel, [...tableDatas])
 
-    
+    const entriesNSearchContainerBaseStyle = {
+        display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '0.5rem'
+    }
+
+    const infosNPaginationContainerBaseStyle = {
+        display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '0.25rem'
+    }
 
     return(
-        <>
+        <div style={{display:'flex', flexDirection:'column', width:'100%'}}>
             {preset?.global.font === "'Jost', sans-serif" ?
                 <style>
                     @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap");
@@ -73,19 +79,19 @@ export function DatasTable({tableModel, tableDatas, preset, nRowsDefault, hideNR
             { isColumnsDefinitionMatchingDatas ? 
                 // providing model, datas & dispatch fn to the children components
                 <DatasTableContext.Provider value={{tableModel, dispatch, tableState, preset : preset || basePreset.get()}}>
-                    {(!hideNRowsSelect || !hideSearchBar) && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '0.5rem'} : {display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '0.5rem'}} id="entriesNSearchContainer">
+                    {(!hideNRowsSelect || !hideSearchBar) && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, ...entriesNSearchContainerBaseStyle} : entriesNSearchContainerBaseStyle} id="entriesNSearchContainer">
                         {!hideNRowsSelect && <NDisplayedSelect nRowsDefault={nRowsDefault}/>}
                         {!hideSearchBar && <SearchModule/>}
                     </div>}
                     <Table/>
-                    {!hidePagination && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '0.25rem'} : {display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '0.25rem'}} id="infosNPaginationContainer">
+                    {!hidePagination && <div style={preset?.global ? {fontFamily : preset.global.font, color : preset.global.textColor, ...infosNPaginationContainerBaseStyle} : infosNPaginationContainerBaseStyle} id="infosNPaginationContainer">
                         <NEntries/>
                         <Pagination/>
                     </div>}
                 </DatasTableContext.Provider> 
                 : <div>Users datas are missing some mandatory dataKeys.</div>
             }
-        </>
+        </div>
     )
 
 }

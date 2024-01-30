@@ -17,7 +17,7 @@ function NEntries(){
 
     // first Entry displayed to last Entry displayed of total Entries
     return(
-        <div style={{ color: preset.nEntries.textColor }}id="infosContainer">Showing {totalEntries != 0 ? firstDisplayedEntry : 0} to {lastDisplayedEntry < totalEntries ? lastDisplayedEntry : totalEntries} of {totalEntries} entries</div>
+        <div style={{ color: preset.nEntries.textColor,  display: 'flex', alignItems: 'center' }} id="infosContainer">Showing {totalEntries != 0 ? firstDisplayedEntry : 0} to {lastDisplayedEntry < totalEntries ? lastDisplayedEntry : totalEntries} of {totalEntries} entries</div>
     )
 }
 
