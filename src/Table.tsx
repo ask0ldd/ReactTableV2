@@ -33,6 +33,10 @@ function Table() {
     const arrowActiveColor = {color: preset.th.arrow.activeColor}
     const topSeparatorColor = {borderBottom : '1px solid ' + preset.firstnLastRowSeparatorsColor}
     const hoverRowStyle = {background : preset.evenRow.backgroundColor.hover, borderBottom:'1px solid ' + preset.evenRow.backgroundColor.hover, color : preset.evenRow.textColor.hover}
+    // 10px 18px 10px 18px
+    console.log(preset.row.paddingTop)
+    console.log(preset.row.paddingBottom)
+    const thPadding = {padding : "10px " + (18 + parseInt(preset.row.paddingTop) + 'px ') + "10px " + (18 + parseInt(preset.row.paddingBottom) + 'px')}
 
     return (
       <table style={preset.global ? {background: preset.global.backgroundColor, fontFamily : preset.global.font, color : preset.global.textColor} : {}} id={tableModel.getTableId()} aria-label="Current Employees">
@@ -76,7 +80,7 @@ function Table() {
                   if(column.component && isValidElement(column.component(index))) return (column.component(index, datarow)) // rowdatas datarow
                   // or display datas
                   const key = column.accessor
-                  return(<td key={'tdtable-'+key+'-'+index2+index}>{key && datarow[key as keyof typeof datarow]}</td>)
+                  return(<td style={thPadding} key={'tdtable-'+key+'-'+index2+index}>{key && datarow[key as keyof typeof datarow]}</td>)
                 })
               }
             </tr>

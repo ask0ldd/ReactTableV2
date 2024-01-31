@@ -153,7 +153,7 @@ class PresetClass {
         this.#set({...this.#preset,
             row : {
                 ...this.#preset.row,
-                paddingTop : value
+                paddingTop : value.replace('px', '').replace('rem', '').replace('em', '')
             }
         })
         return this
@@ -163,7 +163,7 @@ class PresetClass {
         this.#set({...this.#preset,
             row : {
                 ...this.#preset.row,
-                paddingBottom : value
+                paddingBottom : value.replace('px', '').replace('rem', '').replace('em', '')
             }
         })
         return this
