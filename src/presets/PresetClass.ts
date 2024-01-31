@@ -149,6 +149,26 @@ class PresetClass {
         return this
     }
 
+    setRowTopPadding(value : string){
+        this.#set({...this.#preset,
+            row : {
+                ...this.#preset.row,
+                paddingTop : value
+            }
+        })
+        return this
+    }
+
+    setRowBottomPadding(value : string){
+        this.#set({...this.#preset,
+            row : {
+                ...this.#preset.row,
+                paddingBottom : value
+            }
+        })
+        return this
+    }
+
     // !!! set pagination buttons color
 }
 

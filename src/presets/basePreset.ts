@@ -16,7 +16,7 @@ export const basePreset = new PresetClass(
             arrow: { activeColor: "rgb(0, 120, 215)", inactiveColor: "#ddd" },
             separatorColor: "#111",
         },
-        Row: {
+        row: {
             paddingTop : '0',
             paddingBottom : '0',
         },

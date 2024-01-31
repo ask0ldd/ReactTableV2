@@ -15,7 +15,7 @@ export const darkPurplePreset = new PresetClass({
         arrow : { activeColor : "#693faf", inactiveColor : "#7D769BFF" },
         separatorColor: "#2F2D3B"
     },
-    Row: {
+    row: {
         paddingTop : '0',
         paddingBottom : '0',
     },

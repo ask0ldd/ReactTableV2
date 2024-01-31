@@ -18,7 +18,7 @@ export interface IPreset {
         arrow : {activeColor : string, inactiveColor : string}
         separatorColor : string
     },
-    Row : {
+    row : {
         paddingTop : string,
         paddingBottom : string
     },

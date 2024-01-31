@@ -15,7 +15,7 @@ export const darkGreenPreset = new PresetClass({
         arrow : {activeColor : "#20A073", inactiveColor : "#7D769BFF"},
         separatorColor: "#2F2D3B"
     },
-    Row: {
+    row: {
         paddingTop : '0',
         paddingBottom : '0',
     },
