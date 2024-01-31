@@ -16,6 +16,10 @@ export const basePreset = new PresetClass(
             arrow: { activeColor: "rgb(0, 120, 215)", inactiveColor: "#ddd" },
             separatorColor: "#111",
         },
+        Row: {
+            paddingTop : '0',
+            paddingBottom : '0',
+        },
         evenRow: {
             backgroundColor: { default: "none", hover: "linear-gradient(360deg, #2c91e4cc, #2c91e4aa)" },
             textColor: { default: "#213547", hover: "#FFFFFF" },

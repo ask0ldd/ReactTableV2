@@ -15,6 +15,10 @@ export const darkPurplePreset = new PresetClass({
         arrow : { activeColor : "#693faf", inactiveColor : "#7D769BFF" },
         separatorColor: "#2F2D3B"
     },
+    Row: {
+        paddingTop : '0',
+        paddingBottom : '0',
+    },
     evenRow: {
         backgroundColor : {default : "#0A0A12", hover : "linear-gradient(270deg, #4a2e7a, #693faf)"},
         textColor : {default : "#7D769BDD", hover : "#FFFFFF"},

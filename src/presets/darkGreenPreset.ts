@@ -15,6 +15,10 @@ export const darkGreenPreset = new PresetClass({
         arrow : {activeColor : "#20A073", inactiveColor : "#7D769BFF"},
         separatorColor: "#2F2D3B"
     },
+    Row: {
+        paddingTop : '0',
+        paddingBottom : '0',
+    },
     evenRow: {
         backgroundColor : {default : "#0A0A12", hover : "linear-gradient(90deg, #20A073, #277d5f)"},
         textColor : {default : "#7D769BDD", hover : "#FFFFFF"},

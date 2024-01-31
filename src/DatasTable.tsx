@@ -49,7 +49,7 @@ export function DatasTable({tableModel, tableDatas, preset, nRowsDefault, hideNR
     const {tableState, dispatch} = useTableManager(tableModel, [...tableDatas])
 
     const entriesNSearchContainerBaseStyle = {
-        display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '0.5rem'
+        display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '0.35rem'
     }
 
     const infosNPaginationContainerBaseStyle = {

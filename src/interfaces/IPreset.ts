@@ -18,6 +18,10 @@ export interface IPreset {
         arrow : {activeColor : string, inactiveColor : string}
         separatorColor : string
     },
+    Row : {
+        paddingTop : string,
+        paddingBottom : string
+    },
     evenRow : {
         backgroundColor : {default : string, hover : string},
         textColor : {default : string, hover : string},

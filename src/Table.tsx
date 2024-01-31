@@ -27,7 +27,7 @@ function Table() {
 
     // defining elements styles
     const thPreset = {color : preset.th.textColor, background : preset.th.backgroundColor, fontWeight:preset.th.fontWeight, textAlign : preset.th.textAlign}
-    const oddRowPreset = {color : preset.oddRow.textColor.default, background : preset.oddRow.backgroundColor.default, borderBottom:'1px solid '+ preset.oddRow.bottomSeparatorColor}
+    const oddRowPreset = { color : preset.oddRow.textColor.default, background : preset.oddRow.backgroundColor.default, borderBottom:'1px solid '+ preset.oddRow.bottomSeparatorColor}
     const evenRowPreset = {color : preset.evenRow.textColor.default, background : preset.evenRow.backgroundColor.default, borderBottom:'1px solid '+ preset.evenRow.bottomSeparatorColor}
     const arrowInactiveColor = {color: preset.th.arrow.inactiveColor}
     const arrowActiveColor = {color: preset.th.arrow.activeColor}
