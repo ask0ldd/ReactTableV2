@@ -149,6 +149,11 @@ class PresetClass {
         return this
     }
 
+    /**
+     * Set the top padding for the row.
+     * @param {string} value - The value for the top padding. Should be a string with a unit (e.g., '10px', '2rem').
+     * @returns {Object} - The current object instance.
+     */
     setRowTopPadding(value : string){
         this.#set({...this.#preset,
             row : {
@@ -159,6 +164,11 @@ class PresetClass {
         return this
     }
 
+    /**
+     * Set the bottom padding for the row.
+     * @param {string} value - The value for the bottom padding. Should be a string with a unit (e.g., '10px', '2rem').
+     * @returns {Object} - The current object instance.
+     */
     setRowBottomPadding(value : string){
         this.#set({...this.#preset,
             row : {

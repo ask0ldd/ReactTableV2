@@ -108,6 +108,11 @@ function Table() {
     return dispatch({ type: 'sorting', payload: { column: tableAccessors[index], direction: 'asc' } })
   }
 
+  /**
+   * Retrieves the rows to display based on the current table state and pagination.
+   * @function
+   * @returns {Array} The rows to be displayed on the table.
+   */
   function getRowsToDisplay(){
     if(tableState == null) return []
     const firstDisplayedEntry = tableState.pagination ? Math.abs((tableState.pagination.currentPage - 1) * tableState.pagination.nEntriesPerPage) : 0
