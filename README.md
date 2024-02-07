@@ -176,6 +176,8 @@ To replace a preset's default font, use the setGlobalFont method and pass the de
 If the text in your cell is not vertically centered you can add some padding to fix it, use those methods of the preset class with a number of pixels as parameter :
 
 .setRowTopPadding('numberOfPixels') & .setRowBottomPadding('numberOfPixels')
+&nbsp;
+&nbsp;
 
 <hr>
   
